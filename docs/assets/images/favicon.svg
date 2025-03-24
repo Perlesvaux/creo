@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--<?xml version="1.0" encoding="UTF-8" standalone="no"?>-->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
@@ -20,12 +20,19 @@
   </g>
 
   <style>
+    /* Default light mode */
     #path21 {
-      display:inline;
-      fill: light-dark(#FFFFFF, #000000);
-      stroke-width:0.297413;
+      fill: #000000;
+    }
+    
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      #path21 {
+        fill: #ffffff;
+      }
     }
   </style>
 </svg>
 
        <!--style=""-->
+      <!--fill: light-dark(#FFFFFF, #000000);-->
