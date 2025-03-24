@@ -1,0 +1,35 @@
+.glass{
+  padding-top: 50px; /*some space to place the exit button*/
+  height:auto;
+  border: 1px solid transparent;
+  /*overflow-y: hidden;*/
+
+
+  /*background: rgb(0,0,0);*/
+  /*background: linear-gradient(180deg, rgba(45,45,45,0.9) 45%, rgba(225,225,225,0.9) 100%); top:0;*/
+
+}
+
+.hide{
+  display:none;
+}
+
+.loadMore{
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.logo {
+  fill:black;
+  width:50px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}

@@ -1,0 +1,42 @@
+.simpleScreen{
+
+  overscroll-behavior-block: contain;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 10px;
+
+  flex-direction: column;
+  border-radius: var(--e-border-radius);
+
+
+
+}
+
+.simpleScreen > img{
+  width:  65vh;
+  height: auto;
+}
+.simpleScreen > video{
+  width:  65vh;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .simpleScreen {
+    width: 100%;
+  }
+
+  .simpleScreen > video{
+    height: auto;
+    width: 100%;
+  }
+
+  .simpleScreen > img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+

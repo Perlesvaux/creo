@@ -1,0 +1,2 @@
+#!/bin/bash
+find docs/ -name Gemfile -execdir bundle exec jekyll serve \;

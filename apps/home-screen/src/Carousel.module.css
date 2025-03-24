@@ -1,0 +1,93 @@
+.carrousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--e-border-radius);
+  padding: 5px;
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.4966592427616926) 100%
+  );
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.4966592427616926) 100%
+  );
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.4966592427616926) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+  overflow: hidden; /* Ensure the sliding elements don't overflow */
+}
+
+.carrouselElement {
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  width: 50vh;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, border-radius 0.2s ease-in-out ; /* Smooth transition */
+}
+
+.carrouselElement > img {
+  transition: all 0.33s ease-in;
+  transform: scale(0.9);
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: var(--e-border-radius);
+}
+
+.carrouselElement:hover > img {
+  transition: all 0.33s ease-out;
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+/* Slide animations */
+.next {
+  transform: translateX(10%) scale(0.77) rotate(10deg);
+  border-radius: 50px;
+  filter: blur(4px);
+}
+
+.prev {
+  transform: translateX(-10%) scale(0.77) rotate(-10deg);
+  filter: blur(4px);
+  /*animation: slideprev 0.2s linear;*/
+}
+
+.curr { 
+  /*transform: translate(0);*/
+  /*opacity: 1;*/
+
+}
+
+@keyframes slideprev {
+  25% {transform: scale(0.1); opacity: 0.0;}
+  50% {transform: translate(200%) scale(1); opacity: 0.0;}
+  60% {transform: translate(200%) scale(1); opacity: 0.1;}
+  100%   {transform: translate(0);}
+
+}
+
+/*@keyframes slidenext {*/
+/*  from {transform: translateX(-200%);}*/
+/*  to   {transform: translateX(0);}*/
+/*}*/
+
+
+
+@media only screen and (max-width: 480px) {
+  .carrousel {
+    background-color: slategray;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .carrouselElement {
+    width: 33vh;
+  }
+}

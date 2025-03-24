@@ -1,0 +1,28 @@
+#!/bin/bash
+# find packages/home-screen/ -maxdepth 1 -name "package.json" -execdir npm run dev \;
+SOURCE=$2/package.json
+SOURCE=${SOURCE/\/\//\/}
+
+case $1 in
+  "dev")
+    TYPE="dev"
+    ;;
+  "preview")
+    TYPE="preview"
+    ;;
+  "build")
+    TYPE="build"
+    ;;
+  *)
+    echo "i.e.: ./run dev package/home-screen expose"
+    exit 1
+    ;;
+esac
+
+EXPOSE=""
+if [ "$3" = "expose" ]; then
+  EXPOSE="-- --host"
+fi
+
+find apps/ -wholename $SOURCE -execdir npm run $TYPE $EXPOSE \;
+

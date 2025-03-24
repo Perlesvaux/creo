@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light dark;
+}
+
+.banner {
+  text-align: center; /* Center the image */
+}
+
+.banner-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.svg-icon{
+  width: 25px;
+  height:25px;
+}
+
+.social-media-list {
+  justify-items: center;
+}
+
+.elpepe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*align-content: space-between;*/
+  row-gap: 5px;
+  column-gap: 5px;
+  
+  /*display: grid;*/
+  /*justify-items: center;*/
+  /*justify-content: space-evenly;*/
+  /*grid-template-columns: auto auto auto;*/
+}
+
+
+

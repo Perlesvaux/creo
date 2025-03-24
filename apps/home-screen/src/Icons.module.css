@@ -1,0 +1,114 @@
+
+  /*--button-height:100px;  */
+  /*--button-width:30px;  */
+
+@media only screen and (max-width: 480px) {
+
+  /*.button {*/
+  /*}*/
+
+  .button > svg {
+    transform: rotate(90deg) !important;
+  }
+
+  .active {
+    /*transform: scale(1.5) rotate(90deg) !important;*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .button:active {
+    /*transform: scale(1.5) rotate(90deg) !important;*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+}
+
+
+.button{
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: var(--e-border-radius);
+  transition: transform 0.1s ease-in, box-shadow 0.1s ease-out;
+}
+
+.button > svg {
+  fill: slategray;
+  width:var(--button-width);
+  height:100%;
+}
+
+.button:hover > svg {
+  fill: azure;
+}
+
+.active{
+  transform: scale(1.08);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.active > svg {
+  fill: azure;
+}
+
+.button:active {
+  transform: scale(1.08);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.left{
+  border:5px outset rgba(0, 0, 0, 0.3);
+}
+.right {
+  border:5px outset rgba(255, 255, 255, 0.3);
+}
+
+
+.exit{
+  border-top: 5px solid white;
+  border-left: 5px solid white;  
+  border-bottom: 5px solid white;
+
+  background-color: black;
+  /*border:5px outset white;*/
+  border-radius: 50px;
+  height: 40px;
+  width:  40px;
+  position:fixed;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  top:0;
+  display: flex;
+  justify-content: stretch; 
+  align-items: stretch;
+  z-index: 11;
+  transition: all 0.3s ease-out;
+}
+.exit > svg {
+  fill:white; 
+  }
+
+.exit:hover {
+  background-color:white;
+  border:5px inset white;
+  transform: translate(-50%) rotate(180deg);
+}
+.exit:hover > svg{
+  fill: black;
+}
+
+.exitBackground {
+  z-index: 10;
+  position:fixed;
+  height:55px;
+  width:100%;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,0.9) 45%, rgba(255,255,255,0) 100%); top:0;
+  /*background-color:rgba(0, 0, 0, 1);*/
+  filter: blur(1px);
+  
+  
+}
+

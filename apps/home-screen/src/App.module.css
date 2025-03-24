@@ -1,0 +1,14 @@
+.carrousel{
+  display:flex;
+  justify-content: space-around;
+}
+
+.carrouselElement{
+  background-color: lightcoral;
+  padding: 20px;
+}
+
+.carrouselElementTest{
+  background-color: plum;
+  padding: 20px;
+}

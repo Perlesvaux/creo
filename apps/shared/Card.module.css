@@ -1,0 +1,35 @@
+.multimedia{
+  /*height:auto;*/
+  width: 30vh;
+  /*height:189px;*/
+  /*width:242px;*/
+}
+
+.desc {
+  color: white;
+  position: absolute;
+  top: 10%;
+  left:10%;
+  /*bottom: 5%;*/
+  font-size: 1.2vh;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(255, 0, 0, 0.6);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.desc:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desc {
+    font-size: 0.8rem;
+    /*bottom: 3%;*/
+  }
+}
+
