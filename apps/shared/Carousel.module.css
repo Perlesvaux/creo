@@ -1,3 +1,21 @@
+:root{
+  --small:639px;
+  --medium:970px;
+  --large:1027px;
+
+  --e-width:300px;  
+  --e-height:169px;
+  --e-width-m:420px;  
+  --e-height-m:236px;
+  --e-width-l:600px;  
+  --e-height-l:338px;
+  --e-border-radius:20px;  
+  --button-height:100px;  
+  --button-width:3.3vh;  
+
+
+}
+
 .carrousel {
   display: flex;
   justify-content: space-between;
