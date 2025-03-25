@@ -11,6 +11,7 @@ export default defineConfig({
   plugins: [react()],
   server: { port: 5180 }, 
   preview: { port: 5181 },
+  build: { copyPublicDir: false }
   //publicDir:'../static',
   //resolve: {
   //  alias: {
