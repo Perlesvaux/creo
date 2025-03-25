@@ -7,3 +7,4 @@ export { default as Card } from './Card.jsx';
 export { default as Carousel } from './Carousel.jsx'
 export { Right, Left, Exit } from './Icons.jsx'
 export { default as Picture } from './Picture.jsx'
+export { default as Movie } from './Movie.jsx'
