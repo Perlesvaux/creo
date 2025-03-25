@@ -1,22 +1,22 @@
 :root{
-  --small:639px;
-  --medium:970px;
-  --large:1027px;
-
-  --e-width:300px;  
-  --e-height:169px;
-  --e-width-m:420px;  
-  --e-height-m:236px;
-  --e-width-l:600px;  
-  --e-height-l:338px;
-  --e-border-radius:20px;  
-  --button-height:100px;  
-  --button-width:3.3vh;  
+  /*--small:639px;*/
+  /*--medium:970px;*/
+  /*--large:1027px;*/
+  /**/
+  /*--e-width:300px;  */
+  /*--e-height:169px;*/
+  /*--e-width-m:420px;  */
+  /*--e-height-m:236px;*/
+  /*--e-width-l:600px;  */
+  /*--e-height-l:338px;*/
+  /*--button-height:100px;  */
+  /*--button-width:3.3vh;  */
 
 
 }
 
 .carrousel {
+  --e-border-radius:20px;  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,7 +61,7 @@
 
 .carrouselElement:hover > img {
   transition: all 0.33s ease-out;
-  transform: scale(1.08);
+  transform: scale(1.02);
   cursor: pointer;
   z-index: 3;
 }
@@ -102,7 +102,7 @@
 
 @media only screen and (max-width: 480px) {
   .carrousel {
-    background-color: slategray;
+    /*background-color: slategray;*/
     flex-direction: column;
     row-gap: 10px;
   }
