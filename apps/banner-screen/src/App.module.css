@@ -17,6 +17,7 @@
   left:1vh;
   display: flex;
   column-gap: 0.5vh;
+  justify-content: center;
 }
 
 .socials > a > button {
@@ -60,3 +61,15 @@
 /*  width:var(--size);*/
 /*  height:var(--size);*/
 /*}*/
+
+@media only screen and (max-width: 480px) {
+
+  .socials  {
+    position: fixed;
+    top:0;
+    bottom:0;
+    flex-direction: column;
+    row-gap: 0.5vh;
+  }
+
+}
