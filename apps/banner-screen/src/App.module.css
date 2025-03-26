@@ -9,20 +9,21 @@
 }
 
 .socials {
-  --size:30px;
-  --fill:black;  
-  /*background-color: green;*/
+  --size: 24px;
+  --fill: black;  
+  --button-color: gainsboro;
+  --single-color: #F0F0F0;
   position: absolute;
-  bottom:1vw;
-  left:1vh;
+  left:1vh; /* Adjust as needed */
+  transform: translateY(-50%); /* Shift up by half its height */
   display: flex;
   column-gap: 0.5vh;
-  justify-content: center;
 }
 
 .socials > a > button {
   border-radius: 5px;
   border: 0 solid transparent;
+  background-color: var(--button-color);
 }
 
 
@@ -63,13 +64,21 @@
 /*}*/
 
 @media only screen and (max-width: 480px) {
-
-  .socials  {
+  .socials {
     position: fixed;
-    top:0;
-    bottom:0;
+    top: 50%; /* Center vertically */
+    right: 1vw; /* Adjust right spacing */
+    bottom: auto; /* Remove bottom positioning */
+    left: auto; /* Remove left positioning */
+    transform: translateY(-50%); /* Center properly */
     flex-direction: column;
     row-gap: 0.5vh;
+    
+    background-color: var(--single-color);
+    border-radius: 5px;
+    border: 2px solid black;
   }
-
+  .socials > a > button {
+    background-color: var(--single-color);
+  }
 }
