@@ -1,0 +1,62 @@
+.banner {
+  text-align: center; /* Center the image */
+  position: relative;
+}
+
+.bannerImage {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.socials {
+  --size:30px;
+  --fill:black;  
+  /*background-color: green;*/
+  position: absolute;
+  bottom:1vw;
+  left:1vh;
+  display: flex;
+  column-gap: 0.5vh;
+}
+
+.socials > a > button {
+  border-radius: 5px;
+  border: 0 solid transparent;
+}
+
+
+.socials > a > button > img  {
+  fill:var(--fill);
+  width:var(--size);
+  height:var(--size);
+}
+
+.socials > a:hover > button {
+  background: rgb(131,58,180);
+  background: linear-gradient(150deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  border-radius: 7px;
+  transform:scale(1.5);
+  cursor:pointer;
+}
+
+
+.socials > a > button:focus {
+  background: rgb(131,58,180);
+  background: linear-gradient(150deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  border-radius: 7px;
+  transform:scale(1.5);
+  outline: 2px solid transparent;
+}
+
+
+/*.socials > a:hover > button > img  {*/
+/*  border-radius: 7px;*/
+/*  transform:scale(1.1)*/
+/*}*/
+
+
+/*.socials > a > button > svg  {*/
+/*  fill:var(--fill);*/
+/*  width:var(--size);*/
+/*  height:var(--size);*/
+/*}*/

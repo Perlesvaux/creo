@@ -1,8 +1,12 @@
 <header class="site-header" role="banner">
 
-<div class="banner">
-  <img src="{{ site.banner_image | relative_url }}" alt="Banner Image" class="banner-image">
-</div>
+<!--<div class="banner">-->
+<!--  <img src="{{ site.banner_image | relative_url }}" alt="Banner Image" class="banner-image">-->
+<!--</div>-->
+
+<script type="module" crossorigin src="{{ site.baseurl }}{% link assets/banner-screen/index.js %}"></script>
+<link rel="stylesheet" crossorigin href="{{ site.baseurl }}{% link assets/banner-screen/index.css %}">
+<div id="root-banner-screen"></div>
 
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
