@@ -22,7 +22,7 @@
 
 .socials > a > button {
   border-radius: 5px;
-  border: 0 solid transparent;
+  border: 2.7px solid black;
   background-color: var(--button-color);
 }
 
@@ -80,5 +80,6 @@
   }
   .socials > a > button {
     background-color: var(--single-color);
+    border: 3px solid transparent;
   }
 }
