@@ -8,7 +8,7 @@ import { deeds} from './Content.jsx'
 export default function App() {
 
   return<>
-    <Carousel collection={deeds} upTo={3} />
+    <Carousel collection={deeds} upTo={1} />
   </>
   
 }
