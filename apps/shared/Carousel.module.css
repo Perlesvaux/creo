@@ -1,48 +1,33 @@
-:root{
-  /*--small:639px;*/
-  /*--medium:970px;*/
-  /*--large:1027px;*/
-  /**/
-  /*--e-width:300px;  */
-  /*--e-height:169px;*/
-  /*--e-width-m:420px;  */
-  /*--e-height-m:236px;*/
-  /*--e-width-l:600px;  */
-  /*--e-height-l:338px;*/
-  /*--button-height:100px;  */
-  /*--button-width:3.3vh;  */
-
-
-}
-
 .carrousel {
   --e-border-radius:20px;  
+  height:30vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: var(--e-border-radius);
   padding: 5px;
-  background: rgb(0, 0, 0);
-  background: -moz-linear-gradient(
-    145deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0.4966592427616926) 100%
-  );
-  background: -webkit-linear-gradient(
-    145deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0.4966592427616926) 100%
-  );
-  background: linear-gradient(
-    145deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0.4966592427616926) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+  /*background: rgb(0, 0, 0);*/
+  /*background: -moz-linear-gradient(*/
+  /*  145deg,*/
+  /*  rgba(0, 0, 0, 1) 0%,*/
+  /*  rgba(255, 255, 255, 0.4966592427616926) 100%*/
+  /*);*/
+  /*background: -webkit-linear-gradient(*/
+  /*  145deg,*/
+  /*  rgba(0, 0, 0, 1) 0%,*/
+  /*  rgba(255, 255, 255, 0.4966592427616926) 100%*/
+  /*);*/
+  /*background: linear-gradient(*/
+  /*  145deg,*/
+  /*  rgba(0, 0, 0, 1) 0%,*/
+  /*  rgba(255, 255, 255, 0.4966592427616926) 100%*/
+  /*);*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);*/
   overflow: hidden; /* Ensure the sliding elements don't overflow */
 }
 
 .carrouselElement {
+  /*filter: drop-shadow(20px 35px 4px black);*/
   position: relative;
   display: flex;
   justify-content: center;
@@ -100,15 +85,23 @@
 
 
 
-@media only screen and (max-width: 480px) {
-  .carrousel {
-    /*background-color: slategray;*/
-    flex-direction: column;
-    row-gap: 10px;
-  }
+/*@media only screen and (max-width: 480px) {*/
+/*  .carrousel {*/
+/*    flex-direction: column;*/
+/*    row-gap: 10px;*/
+/*  }*/
+/*  .carrouselElement {*/
+/*    width: 33vh;*/
+/*  }*/
+/*}*/
 
+
+@media only screen and (max-width: 550px) {
+  /*.carrousel {*/
+  /*  flex-direction: column;*/
+  /*  row-gap: 10px;*/
+  /*}*/
   .carrouselElement {
     width: 33vh;
   }
 }
-

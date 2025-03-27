@@ -2,32 +2,23 @@
   /*--button-height:100px;  */
   /*--button-width:30px;  */
 
-@media only screen and (max-width: 480px) {
-
-  /*.button {*/
-  /*}*/
-
-  .button > svg {
-    transform: rotate(90deg) !important;
-  }
-
-  .active {
-    /*transform: scale(1.5) rotate(90deg) !important;*/
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  .button:active {
-    /*transform: scale(1.5) rotate(90deg) !important;*/
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-}
+/*@media only screen and (max-width: 480px) {*/
+/*  .button > svg {*/
+/*    transform: rotate(90deg) !important;*/
+/*  }*/
+/*  .active {*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
+/*  }*/
+/*  .button:active {*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
+/*  }*/
+/*}*/
 
 
 .button{
   --e-border-radius:20px;  
   --button-width:3.3vh;  
-  align-self: stretch;
+  /*align-self: stretch;*/
   background-color: transparent;
   border-radius: var(--e-border-radius);
   transition: transform 0.1s ease-in, box-shadow 0.1s ease-out;

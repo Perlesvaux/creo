@@ -32,11 +32,12 @@ export default function App() {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Bienvenido a CREO Digital Agency</h1>
+          <Carousel collection={deeds} upTo={1} />
           <p className={styles.heroSubtitle}>Danos tu idea, nosotros nos encargamos del resto. Mientras tanto, se te antoja un cafesito?</p>
           <button className={styles.heroButton}>Get Started</button>
 
-
           <Carousel collection={deeds} upTo={1} />
+          <h2 className={styles.heroSubtitle}>Conoce nuestro trabajo!</h2>
 
 
 
