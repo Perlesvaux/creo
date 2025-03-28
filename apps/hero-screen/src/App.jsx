@@ -33,7 +33,7 @@ export default function App() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Bienvenido a CREO!</h1>
           <p className={styles.heroSubtitle}>Danos tu idea, nosotros nos encargamos del resto.</p>
-          <Carousel collection={deeds} upTo={1} />
+          <Carousel collection={deeds} upTo={3} />
           <p className={styles.heroSubtitle}>Mientras tanto, se te antoja un cafesito?</p>
           <button className={styles.heroButton}>Get Started</button>
 

@@ -1,28 +1,12 @@
 .carrousel {
+  --offset-arrow:10vh;
+  --position-arrow:relative;
   --e-border-radius:20px;  
-  /*height:30vh;*/
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: var(--e-border-radius);
   padding: 5px;
-  /*background: rgb(0, 0, 0);*/
-  /*background: -moz-linear-gradient(*/
-  /*  145deg,*/
-  /*  rgba(0, 0, 0, 1) 0%,*/
-  /*  rgba(255, 255, 255, 0.4966592427616926) 100%*/
-  /*);*/
-  /*background: -webkit-linear-gradient(*/
-  /*  145deg,*/
-  /*  rgba(0, 0, 0, 1) 0%,*/
-  /*  rgba(255, 255, 255, 0.4966592427616926) 100%*/
-  /*);*/
-  /*background: linear-gradient(*/
-  /*  145deg,*/
-  /*  rgba(0, 0, 0, 1) 0%,*/
-  /*  rgba(255, 255, 255, 0.4966592427616926) 100%*/
-  /*);*/
-  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);*/
   overflow: hidden; /* Ensure the sliding elements don't overflow */
 }
 
@@ -70,14 +54,38 @@
 
 }
 
-.arrows {
-  position:absolute;
-  z-index: 999;
-  display: flex;
-  column-gap: 30vh;
-  /*justify-content:space-around;*/
-  
+.left {
+  /*position:var(--position-arrow);*/
+  /*left:var(--offset-arrow);*/
+  /*display: flex;*/
+
+/*works fine!*/
+  z-index: 9;
+  /*margin-right: -10vh;*/
+
+  transform: translateX(10vh)
 }
+
+.right {
+  /*position:var(--position-arrow);*/
+  /*right:var(--offset-arrow);*/
+
+/*works fine!*/
+  z-index: 9;
+  transform: translateX(-10vh)
+  /*margin-left: -10vh;*/
+
+}
+
+/*.arrows {*/
+/*  position:absolute;*/
+/*  z-index: -1;*/
+/*  display: flex;*/
+/*  column-gap: 30vh;*/
+/*}*/
+/*.arrows > button {*/
+/*  z-index: 999;*/
+/*}*/
 
 @keyframes slideprev {
   25% {transform: scale(0.1); opacity: 0.0;}
