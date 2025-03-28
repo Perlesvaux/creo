@@ -113,12 +113,31 @@
 /*}*/
 
 
-/*@media only screen and (max-width: 550px) {*/
-  /*.carrousel {*/
-  /*  flex-direction: column;*/
-  /*  row-gap: 10px;*/
-  /*}*/
+@media only screen and (max-width: 550px) {
+  .carrousel {
+    --size:10vh;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .left{
+    position: absolute;
+    transform: translateX(-16vh);
+  }
+  .left > button {
+    height: var(--size);
+    width: var(--size);
+  }
+
+  .right {
+    position: absolute;
+    transform: translateX(16vh);
+  }
+  .right > button {
+    height: var(--size);
+    width: var(--size);
+  }
   /*.carrouselElement {*/
   /*  width: 33vh;*/
   /*}*/
-/*}*/
+}
