@@ -84,9 +84,11 @@ export default function Carousel({ collection, upTo = 3 }) {
   return (
     <>
       <div className={css.carrousel}>
-        <Left onClick={prevElement} />
+        <div className={css.arrows}>
+          <Left onClick={prevElement} />
+          <Right onClick={nextElement} />
+        </div>
         {panels()}
-        <Right onClick={nextElement} />
       </div>
     </>
   );

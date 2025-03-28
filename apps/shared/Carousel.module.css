@@ -1,6 +1,6 @@
 .carrousel {
   --e-border-radius:20px;  
-  height:30vh;
+  /*height:30vh;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +70,15 @@
 
 }
 
+.arrows {
+  position:absolute;
+  z-index: 999;
+  display: flex;
+  column-gap: 30vh;
+  /*justify-content:space-around;*/
+  
+}
+
 @keyframes slideprev {
   25% {transform: scale(0.1); opacity: 0.0;}
   50% {transform: translate(200%) scale(1); opacity: 0.0;}
@@ -96,12 +105,12 @@
 /*}*/
 
 
-@media only screen and (max-width: 550px) {
+/*@media only screen and (max-width: 550px) {*/
   /*.carrousel {*/
   /*  flex-direction: column;*/
   /*  row-gap: 10px;*/
   /*}*/
-  .carrouselElement {
-    width: 33vh;
-  }
-}
+  /*.carrouselElement {*/
+  /*  width: 33vh;*/
+  /*}*/
+/*}*/

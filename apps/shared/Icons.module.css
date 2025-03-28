@@ -17,7 +17,7 @@
 
 .button{
   --e-border-radius:20px;  
-  --button-width:3.3vh;  
+  --button-width:4.4vh;  
   /*align-self: stretch;*/
   background-color: transparent;
   border-radius: var(--e-border-radius);
