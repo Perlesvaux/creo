@@ -3,7 +3,7 @@ import css from './Carousel.module.css';
 //import { Left, Right } from './Icons.jsx';
 import { Left, Right } from 'shared';
 
-export default function Carousel({ collection, upTo = 3 }) {
+export default function Carousel({ collection, upTo = 3, vertical=false }) {
   const initialState = {
     all: collection,
     current: 0,
@@ -83,7 +83,7 @@ export default function Carousel({ collection, upTo = 3 }) {
 
   return (
     <>
-      <div className={css.carrousel}>
+      <div className={`${css.carrousel} ${vertical && css.vertical}`}>
         <div className={css.left}> <Left onClick={prevElement} /></div>
         {panels()}
         <div className={css.right}><Right onClick={nextElement} /></div>

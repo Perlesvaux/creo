@@ -103,6 +103,10 @@
   text-align: left;
 }
 
+.presentation > div > div >   img {
+  filter: drop-shadow(20px 35px 4px black);
+}
+
 
 
 

@@ -2,6 +2,9 @@ import styles from './App.module.css';
 import { Carousel } from 'shared'
 import { Card, Picture, Movie } from 'shared'
 import Quote from './Quote.jsx'
+import Coffee from './Coffee.jsx'
+import FireButton from './FireButton.jsx'
+import Brewer from './Brewer.jsx'
 
 // /creo-digital-agency/
 import showreelFront2025    from '/static/showreel_2025/front.png'; 
@@ -34,11 +37,12 @@ export default function App() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Bienvenido a CREO!</h1>
           <p className={styles.heroSubtitle}>Danos tu idea, nosotros nos encargamos del resto.
-          Mientras tanto, se te antoja un cafesito?</p>
+          Mientras tanto, se te antoja un cafesito? <Coffee fill="white" />
+          </p>
 
 
           <div className={styles.presentation}>
-            <Carousel collection={deeds} upTo={1} />
+            <Carousel collection={deeds} upTo={1} vertical={true} />
             <i className={styles.pcard}>
               <Quote invert={true} fill="white" />
               If each of us hires people who are bigger than we are, we shall become a company of giants.
@@ -49,7 +53,7 @@ f each of us hires people who are bigger than we are, we shall become a company 
           </div>
 
 
-          <button className={styles.heroButton}><h1>Manos a la obra!</h1></button>
+          <FireButton className={styles.heroButton}>Let's brew something <Brewer/></FireButton>
 
 
           <Carousel collection={deeds} upTo={3} />
