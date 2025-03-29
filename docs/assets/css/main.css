@@ -10,6 +10,13 @@ body {
   font-weight: 400;
 }
 
+button {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+
+}
+
 
 /*body {*/
 /*  min-height: 100vh;*/
