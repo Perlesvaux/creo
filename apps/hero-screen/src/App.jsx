@@ -36,11 +36,13 @@ export default function App() {
 
           <FireButton className={styles.heroButton}>Let's brew something <Brewer/></FireButton>
 
-          { portfolios ? <Carousel collection={portfolios} upTo={3} /> : <span>loading...</span> }
+          <div className={styles.deeds}>
+            <div className={styles.portfolios}><Carousel collection={portfolios} upTo={1} vertical={true} /> </div>
+            <div className={styles.logofolios}><Carousel collection={showreels} upTo={1}  vertical={true} /></div>
+          </div>
 
           <h2 className={styles.heroSubtitle}>Conocenos!</h2>
 
-          <Carousel collection={showreels} upTo={2} />
 
         </div>
 

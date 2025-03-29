@@ -101,10 +101,20 @@ text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6); /* Smoother */
   border-radius: 15px;
 }
 
+.deeds {
+  display: flex;
+  /*background-color: dimgray;*/
+  border-radius: 15px;
+  justify-content: center;
+
+
+}
 
 .presentation > div > div >   img {
   filter: drop-shadow(20px 35px 4px black);
 }
+
+
 
 
 
@@ -119,10 +129,12 @@ text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6); /* Smoother */
     
   }
 
-  .pcard {
-    padding: 0 5vh 5vh 5vh;
-    margin-top: -3vh;
+  .deeds {
+    display: flex !important;
+    flex-direction: column !important;
+    row-gap: 10px;
   }
+
 
 }
 
