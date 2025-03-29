@@ -47,6 +47,8 @@ export default function Quotes(){
 
   const quote = randomQuote()
 
+  if (!quote) return <div> ... loading ... </div>
+
   return <i className={css.quote} >
     <Quote invert={true} fill="white" />
     {quote.quote}

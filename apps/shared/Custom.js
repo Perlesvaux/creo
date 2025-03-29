@@ -38,3 +38,32 @@ export function useArrowButtons(fun, activeClass, keyList){
   return active
 }
 
+
+
+
+export function useArrows(fun, activeClass){
+  const [active, setActive] = useState('')
+
+  useEffect(() => {
+    let timerID;
+
+    const handleFunction =() =>{
+      setActive('')
+      fun()
+    }
+
+    const handleAnimation = () => {
+      if (timerID) clearTimeout(timerID)
+      setActive(activeClass)
+      timerID = setTimeout(handleFunction, 100)
+    }
+
+    handleAnimation()
+
+    return () => {
+      if (timerID) clearTimeout(timerID)
+    }
+  }, [])
+
+  return active
+}

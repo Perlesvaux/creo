@@ -1,6 +1,6 @@
 //import {useRef, useEffect, useState} from 'react'
 import css from './Icons.module.css'
-import {useArrowButtons} from './Custom.js'
+import {useArrowButtons, useArrows} from './Custom.js'
 
 export function Right ({onClick}){
   const state = useArrowButtons(onClick, css.active, ['ArrowRight', 'ArrowDown', 'd', 's', 'D', 'S'])
@@ -20,3 +20,13 @@ export function Exit({onClick}){
 
 }
 
+
+export function RightArrow ({onClick}){
+  const state = useArrows(onClick, css.active)
+    return <button onClick={onClick} className={`${css.button} ${css.right} ${state}`}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M400-280v-400l200 200-200 200Z"/></svg></button>
+}
+
+export function LeftArrow({onClick}){
+  const state = useArrows(onClick, css.active)
+  return <button  onClick={onClick} className={`${css.button} ${css.left} ${state}`}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M560-280 360-480l200-200v400Z"/></svg></button>
+}

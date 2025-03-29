@@ -1,7 +1,7 @@
 import { useReducer, useState, useEffect } from 'react';
 import css from './Carousel.module.css';
 //import { Left, Right } from './Icons.jsx';
-import { Left, Right } from 'shared';
+import { LeftArrow, RightArrow } from 'shared';
 
 export default function Carousel({ collection, upTo = 3, vertical=false }) {
   const initialState = {
@@ -81,12 +81,16 @@ export default function Carousel({ collection, upTo = 3, vertical=false }) {
     ));
   };
 
+
+  const elements = panels()
+  if (!elements) return <div> loading ... </div>
+
   return (
     <>
       <div className={`${css.carrousel} ${vertical && css.vertical}`}>
-        <div className={css.left}> <Left onClick={prevElement} /></div>
-        {panels()}
-        <div className={css.right}><Right onClick={nextElement} /></div>
+        <div className={css.left}> <LeftArrow onClick={prevElement} /></div>
+        {elements}
+        <div className={css.right}><RightArrow onClick={nextElement} /></div>
       </div>
     </>
   );
