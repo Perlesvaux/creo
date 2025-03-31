@@ -1,18 +1,18 @@
 import styles from './App.module.css';
-import { Carousel } from 'shared'
+import { Carousel, Portfolios, Showreels } from 'shared'
 import Coffee from './Coffee.jsx'
 import FireButton from './FireButton.jsx'
 import Brewer from './Brewer.jsx'
 import Quotes from './Quotes.jsx'
-import showreels from './Showreels.jsx'
-import portfolios from './Portfolios.jsx'
+//import showreels from './Showreels.jsx'
+//import portfolios from './Portfolios.jsx'
 
 
 
 export default function App() {
 
-  if (!portfolios) return <div> loading ...</div>
-  if (!showreels) return <div> loading ...</div>
+  if (!Portfolios) return <div> loading ...</div>
+  if (!Showreels) return <div> loading ...</div>
 
 
   return (
@@ -30,15 +30,15 @@ export default function App() {
           </p>
 
           <div className={styles.presentation}>
-            <Carousel collection={showreels} upTo={1} vertical={true} />
+            <Carousel collection={Showreels} upTo={1} vertical={true} />
             <Quotes />
           </div>
 
           <FireButton className={styles.heroButton}>Let's brew something <Brewer/></FireButton>
 
           <div className={styles.deeds}>
-            <div className={styles.portfolios}><Carousel collection={portfolios} upTo={1} vertical={true} /> </div>
-            <div className={styles.logofolios}><Carousel collection={showreels} upTo={1}  vertical={true} /></div>
+            <div className={styles.portfolios}><Carousel collection={Portfolios} upTo={1} vertical={true} /> </div>
+            <div className={styles.logofolios}><Carousel collection={Showreels} upTo={1}  vertical={true} /></div>
           </div>
 
           <h2 className={styles.heroSubtitle}>Conocenos!</h2>
