@@ -1,0 +1,88 @@
+#!/bin/bash
+# Make compresed copies of your static assets
+
+ORIGIN=./multimedia
+TARGET=./docs/static
+
+mkdir -p $TARGET
+
+
+echo "Origin: $ORIGIN"
+
+# Process Images at root 
+for file in $ORIGIN/*.png $ORIGIN/*.jpg $ORIGIN/*.jpeg; do 
+  [ -f "$file" ] || continue  # Skip if no files found
+  NAME=${file#$ORIGIN/}
+  DESTINATION=$TARGET/$NAME
+  UPDATED="${DESTINATION%.*}.webp"
+  # echo "$file fits nicely into $UPDATED"
+  cwebp -q $1 "$file" -o "$UPDATED"
+done
+
+echo "Images -> $TARGET"
+
+# Process Images inside subdirectories
+for D in $ORIGIN/*; do # Iterate on files and directories of ORIGIN
+
+  SUBDIR=${D#$ORIGIN/} # Remove origin (prefix) ./origin/first2022 -> first2022
+  OUTPUT=$TARGET/$SUBDIR # Output directory -> ./target/static/first2022
+
+  if [ -d "$D" ]; then # If $D is a directory...
+
+    mkdir -p $OUTPUT
+
+    for file in $D/*.png $D/*.jpg $D/*.jpeg; do 
+      [ -f "$file" ] || continue  # Skip if no files found
+      NAME=${file#$D/}
+      DESTINATION=$OUTPUT/$NAME
+      UPDATED="${DESTINATION%.*}.webp"
+      # echo "$file -> $UPDATED"
+      cwebp -q $1 "$file" -o "$UPDATED"
+    done
+
+    echo "Images -> $OUTPUT"
+
+  fi
+
+done
+
+
+for file in $ORIGIN/*.mp4 $ORIGIN/*.mkv $ORIGIN/*.avi $ORIGIN/*.mov $ORIGIN/*.flv $ORIGIN/*.webm $ORIGIN/*.mpg $ORIGIN/*.mpeg $ORIGIN/*.3gp $ORIGIN/*.wmv; do 
+  [ -f "$file" ] || continue  # Skip if no files found
+  NAME=${file#$ORIGIN/}
+  DESTINATION=$TARGET/$NAME
+  UPDATED="${DESTINATION%.*}.mp4"
+  # echo "$file will go into $UPDATED"
+  ffmpeg -y -i "$file" -c:v h264_nvenc -profile:v high -pix_fmt yuv420p -preset p7 -rc vbr -cq 37 -qmin 25 -qmax 40 -c:a aac -b:a 64k -movflags +faststart "$UPDATED"
+done
+
+echo "Videos -> $TARGET "
+
+
+# Process Images inside subdirectories
+for D in $ORIGIN/*; do # Iterate on files and directories of ORIGIN
+
+  SUBDIR=${D#$ORIGIN/} # Remove origin (prefix) ./origin/first2022 -> first2022
+  OUTPUT=$TARGET/$SUBDIR # Output directory -> ./target/static/first2022
+
+  if [ -d "$D" ]; then # If $D is a directory...
+
+    mkdir -p $OUTPUT
+
+    for file in $D/*.mp4 $D/*.mkv $D/*.avi $D/*.mov $D/*.flv $D/*.webm $D/*.mpg $D/*.mpeg $D/*.3gp $D/*.wmv; do 
+      [ -f "$file" ] || continue  # Skip if no files found
+      NAME=${file#$D/}
+      DESTINATION=$OUTPUT/$NAME
+      UPDATED="${DESTINATION%.*}.mp4"
+      # echo "$file -> $UPDATED"
+      ffmpeg -y -i "$file" -c:v h264_nvenc -profile:v high -pix_fmt yuv420p -preset p7 -rc vbr -cq 37 -qmin 25 -qmax 40 -c:a aac -b:a 64k -movflags +faststart "$UPDATED"
+    done
+    echo "Videos -> $OUTPUT"
+
+  fi
+
+done
+
+
+# ffmpeg -y -i "$file" -c:v h264_nvenc -profile:v high -pix_fmt yuv420p -preset p7 -rc vbr -cq 37 -qmin 25 -qmax 40 -c:a aac -b:a 64k -movflags +faststart "$OUTPUT"
+
