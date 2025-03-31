@@ -5,7 +5,7 @@ import { SimpleScreen, CreoLogo, Exit } from 'shared'
 //import CreoLogo from './CreoLogo.jsx'
 //import { Exit } from './Icons.jsx'
 export default function Modal({active, setter, items}){
-  const [visibleItems, setVisibleItems] = useState(items.slice(0,5))
+  const [visibleItems, setVisibleItems] = useState(items.slice(0,3))
   const [page, setPage] = useState(1)
   const btn = useRef(null)
   const ref = useRef(null)
@@ -40,7 +40,7 @@ export default function Modal({active, setter, items}){
     //{visibleItems.map((e)=>e)}  
 
   useEffect(() => {
-    setVisibleItems(items.slice(0,5))
+    setVisibleItems(items.slice(0,3))
     setPage(1)
 
     const container = ref.current;
