@@ -5,7 +5,7 @@ import { SimpleScreen, CreoLogo, Exit } from 'shared'
 //import CreoLogo from './CreoLogo.jsx'
 //import { Exit } from './Icons.jsx'
 export default function Modal({active, setter, items}){
-  const [visibleItems, setVisibleItems] = useState(items.slice(0,3))
+  const [visibleItems, setVisibleItems] = useState(items.slice(0,5))
   const [page, setPage] = useState(1)
   const btn = useRef(null)
   const ref = useRef(null)
@@ -40,7 +40,7 @@ export default function Modal({active, setter, items}){
     //{visibleItems.map((e)=>e)}  
 
   useEffect(() => {
-    setVisibleItems(items.slice(0,3))
+    setVisibleItems(items.slice(0,5))
     setPage(1)
 
     const container = ref.current;
@@ -65,7 +65,8 @@ export default function Modal({active, setter, items}){
     // Used for debouncing, as triggering function after every scroll would be too expensive
     let timeoutId;
 
-    const handleScroll = () => {
+    const handleScroll = (e) => {
+      e.stopPropagation()
       // Clear the previous timeout if it exists
       if (timeoutId) clearTimeout(timeoutId);
 
@@ -87,7 +88,8 @@ export default function Modal({active, setter, items}){
   
 
 
-  const loadMore = () => {
+  const loadMore = (e) => {
+    e.stopPropagation()
     const nextPage = page + 1;
     const nextItems = items.slice(0, nextPage * 5)
     setVisibleItems(nextItems)
