@@ -85,6 +85,8 @@ import p22deportivo           from '/static/portfolio_2022_deportivo/portfolio.w
 
 const portfolio_2025 = ()=>{
 
+const tags = "2025 Portafolio taber tu futura casa impac records b & c luxury auto "
+
 const items = [
   portfolio2025_front,
   taber_banner, taber_1, taber_2, taber_3, taber_4, taber_5, taber_6, taber_7, taber_8, taber_9, taber_10, taber_11, taber_12, taber_13, taber_14, taber_15, taber_16, taber_17,
@@ -94,44 +96,56 @@ const items = [
   portfolio2025_back,
 ].map((e, i) => <Picture key={i} src={e}/>)
 1
-  return <Card key="1" thumb={portfolio2025_front} items={items} />
+  return <Card key="1" thumb={portfolio2025_front} items={items} tags={tags} />
 }
 
 const portfolio_2024 = ()=>{
 
+  const tags = "2024 Portafolio elevate igt impac records taber tu futura casa"
+
   const items = [portfolio2024_front,elevate24,igt24,impacrecords24,taber1_24,taber2_24,tufuturacasa24,portfolio2024_back]
     .map((e, i) => <Picture key={i} src={e}/>)
 
-  return <Card key="2" thumb={portfolio2024_front} items={items} />
+  return <Card key="2" thumb={portfolio2024_front} items={items} tags={tags} />
 }
 
 const portfolio_2023 = ()=>{
+
+  const tags = "2023 Portafolio fishchips fish chips elevate charlie marlin la valenciana onda fria river plate sv taber uno phone technology chaineado"
 
   const items = [
     portfolio2023_front,chaineado23,charliemarlin23,elevate23,fishchips23,igt23,lavalenciana23,ondafria23
     ,phonetechnology503_23,riversv23,taber_23,uno23,portfolio2023_back
   ]
-    .map((e, i) => <Picture key={i} src={e}/>)
+  .map((e, i) => <Picture key={i} src={e}/>)
 
-  return <Card key="2" thumb={portfolio2023_front} items={items} />
+  return <Card key="2" thumb={portfolio2023_front} items={items} tags={tags} />
 }
 
 const portfolio_2022_comercial = () => {
+
+  const tags = "2022 Portafolio Comercial insurance group of texas onda fria uno chaineado la valenciana here and now english taber" 
+
+  const desc = "Portafolio Comercial 2022" 
 
   const items = [
     p22comercial
   ].map((e, i) => <Picture key={i} src={e}/>)
 
-  return <Card key="3" thumb={portfolio2022_front}  items={items} desc="Portafolio Comercial 2022" />
+  return <Card key="3" thumb={portfolio2022_front}  items={items} desc={desc} tags={tags}/>
 }
 
 const portfolio_2022_deportivo = () => {
+
+  const tags = "2022 Portafolio Deportivo river plate sv dribling " 
+
+  const desc = "Portafolio Deportivo 2022" 
 
   const items = [
     p22deportivo
   ].map((e, i) => <Picture key={i} src={e}/>)
 
-  return <Card key="3" thumb={portfolio2022_front}  items={items} desc="Portafolio Deportivo 2022" />
+  return <Card key="3" thumb={portfolio2022_front} items={items} desc={desc} tags={tags}/>
 }
 
 

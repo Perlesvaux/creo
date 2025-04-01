@@ -16,8 +16,12 @@ button {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-style: italic;
-
 }
+span {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+}
+
 
 
 /*body {*/

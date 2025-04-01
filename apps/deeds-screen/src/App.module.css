@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.0vh;
+  /*align-items: center;*/
+  /*box-sizing: border-box;*/
+  
+
+}
+
+.container > input {
+  border-radius: 10px;
+  width: 50vw;
+  align-self: center;
+  height: 3vh;
+  padding-left:1vh;
+}
+
+
+.records {
+  padding: 3vh 0 3vh 0;
+
+  /*max-width: 100%;*/
+  /*max-width: 800px;*/
+  display: flex;
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
+  /*display: grid;*/
+  /*grid-template-columns: auto auto auto;*/
+  justify-content: center;
+  /*column-gap: 1px;*/
+  align-items: center;
+  transform: scale(0.9);
+
+  column-gap: 1vw;
+  row-gap: 1vw;
+
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.5966592427616926) 100%
+  );
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.5966592427616926) 100%
+  );
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.6966592427616926) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+
+  border-radius: 20px;
+
+
+}
+
+.records > div > img {
+  background-color: #f1f1f1;
+  width: 30vw;
+  border-radius: 50px;
+  /*transform: rotate(-2deg) ;*/
+  /*margin-left: -300px;*/
+  transition: 0.4s ease-out;
+  opacity: 0.55;
+  
+}
+
+
+
+
+.records > div:hover {
+  /*transform: scale(1.07);*/
+  z-index: 9;
+}
+
+.records > div:hover > img {
+  opacity: 1;
+  /*transform: scale(1.1) ;*/
+  transform: rotate(-2deg) scale(1.1) ;
+  /*border: 0.5vh solid transparent;*/
+  z-index: 9;
+  
+}
+
+.records > div > span {
+  /*box-sizing: content-box;*/
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: -4.9vh;
+  /*bottom: 0;*/
+  left:0;
+  right:0;
+
+  /*display: block;*/
+  width:80vw;
+  position: absolute;
+  
+  opacity: 0;
+  /*transform: translateY(-8vh);*/
+  transition: 0.3s ease-in-out;
+
+  align-self: center;
+  justify-self: center;
+  /*display: block;*/
+
+  text-align: center;
+  font-weight:bolder;
+  font-size: 1.5vh;
+  visibility: hidden;
+
+
+}
+
+.records > div:hover > span {
+  opacity: 0.9;
+  visibility: visible;
+  /*position: absolute;*/
+  /*transform: translateY(0) ;*/
+  /*align-self: center;*/
+  /*width: 50vw;*/
+}
