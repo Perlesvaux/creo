@@ -1,5 +1,5 @@
 ---
-layout: simple
+layout: sencillo
 title: Portfolio
 permalink: /deeds/
 ---

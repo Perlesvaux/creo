@@ -5,7 +5,7 @@
   /*align-items: center;*/
   /*box-sizing: border-box;*/
 /* Full viewport height */
-height: 90vh;   
+/*height: 100vh;   */
 
   background: rgb(0, 0, 0);
   background: -moz-linear-gradient(
@@ -42,19 +42,22 @@ height: 90vh;
 }
 
 .container > input {
-  border-radius: 10px;
-  width: 50vw;
-  align-self: center;
-  height: 3vh;
-  padding-left:1vh;
+  /*border-radius: 10px;*/
+  /*width: 50vw;*/
+  /*align-self: center;*/
+  /*height: 3vh;*/
+  /*padding-left:1vh;*/
+  position: absolute;
+  
+  
 }
 
 
 .records {
   background-color: rgba(69, 69, 69, 0.66);
   padding: 5vh 0 5vh 0;
-
-  overflow-y: auto; /* Enables scrolling */
+ /* Enables scrolling */
+  /*overflow-y: auto;*/
   /*overscroll-behavior: contain;*/
 
   display: flex;
@@ -144,7 +147,7 @@ height: 90vh;
     flex-wrap: nowrap;
     row-gap: 10px;
     justify-content: left;
-    height:50vh;
+    /*height:50vh;*/
   }
 
   .records > div > img {
@@ -156,6 +159,6 @@ height: 90vh;
 
 @media only screen and (max-width: 376px) {
   .records {
-    height:40vh !important;
+    /*height:40vh !important;*/
   }
 }
