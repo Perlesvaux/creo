@@ -9,7 +9,7 @@ export default function App() {
   const [state, setState] = useState("")
 
   function filterByTags (e) {
-    const wordByWord = state.split(" ")
+    const wordByWord = state.toLowerCase().split(" ")
     const result = wordByWord.every(word => e.includes(word)   )
     return result
   } 

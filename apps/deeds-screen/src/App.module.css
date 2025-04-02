@@ -4,7 +4,8 @@
   row-gap: 2.0vh;
   /*align-items: center;*/
   /*box-sizing: border-box;*/
-  
+/* Full viewport height */
+height: 90vh;   
 
   background: rgb(0, 0, 0);
   background: -moz-linear-gradient(
@@ -24,18 +25,20 @@
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
 
-  padding: 3vh 0 3vh 0;
+  /*padding: 1vh 0 10vh 0;*/
 
 }
 
 .container > h1 {
   color: white;
   text-align: center;
-  /*font-size: 3rem;*/
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -.5px;
   text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6); /* Smoother */
+  padding: 0;
+  margin:0;
 }
 
 .container > input {
@@ -48,25 +51,19 @@
 
 
 .records {
+  background-color: rgba(69, 69, 69, 0.66);
+  padding: 5vh 0 5vh 0;
 
-  /*max-width: 100%;*/
-  /*max-width: 800px;*/
+  overflow-y: auto; /* Enables scrolling */
+  /*overscroll-behavior: contain;*/
+
   display: flex;
-  /*flex-direction: column;*/
   flex-wrap: wrap;
-  /*display: grid;*/
-  /*grid-template-columns: auto auto auto;*/
   justify-content: center;
-  /*column-gap: 1px;*/
   align-items: center;
 
   column-gap: 1vw;
   row-gap: 1vw;
-
-
-  /*border-radius: 20px;*/
-
-
 }
 
 .records > div > img {
@@ -146,11 +143,19 @@
     flex-direction: column !important;
     flex-wrap: nowrap;
     row-gap: 10px;
+    justify-content: left;
+    height:50vh;
   }
 
   .records > div > img {
 
     width: 40vh;
     transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .records {
+    height:40vh !important;
   }
 }
