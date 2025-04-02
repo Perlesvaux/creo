@@ -15,9 +15,10 @@ export default function App() {
   } 
 
   return<div className={css.container}>
+    <h1>Conoce nuestro trabajo!</h1>
     <input type="text" value={state} onChange={(e)=>setState(e.target.value)} placeholder="i.e.: 2025, taber, river, onda fria" />
     <div className={css.records}>
-      { Portfolios.map((item, indx)=> (
+      { Portfolios.map((item)=> (
         <div key={item.props.tags.toLowerCase()} >{item}</div>
       )).filter(e => filterByTags(e.key) ) }
     </div>
