@@ -1,9 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-//import Carousel from './Carousel.jsx'
-import { Carousel, SimpleScreen, Card, Portfolios } from 'shared'
-//import HelloWorld from '../../../../../components/HelloWorld.jsx'
-//import css from './App.module.css'
-//import { deeds} from './Content.jsx'
+import { Portfolios } from 'shared'
+import SearchIcon from './SearchIcon.jsx'
 import css from './App.module.css'
 export default function App() {
 
@@ -14,47 +11,28 @@ export default function App() {
   const refInp = useRef(null)
 
   const lookUp = () => {
-    setVisible(true)
+    setVisible(()=> true)
   }
 
   const dispel = () => {
-    setVisible(false)
+    setVisible(()=> false)
   }
 
 
   useEffect(() => {
 
     const clickHandler = (e)=>{
-      if (!refBtn.current && !refInp.current) return
-
-      if (e.target === refBtn.current) {
-        refBtn.current.click()
-        refInp.current.focus()
-      } 
-
-      if (e.target === refInp.current ) {
-        return
-      }
-
-      if (e.target !== refInp.current && e.target !== refBtn.current){
-        dispel()
-      }
+      const valid = e.target !== refInp.current && e.target !== refBtn.current
+      if (valid) dispel()
     }
 
-
-    const keyHandler = (e) => {
+    const keyHandler = (e)=>{
       if (e.key === 'Escape') dispel()
-
-      const exists = refBtn.current && refInp.current
-
-      if (!exists) return
-
-      const ctrl_F = e.key === 'F' && e.ctrlKey
-      const ctrl_f = e.key === 'f'&& e.shiftKey && e.ctrlKey
-
-      if ( exists && ctrl_F || exists && ctrl_f  ) refBtn.current.click()
+      const f = e.key==='f' || e.key==='F' 
+      if (f && e.ctrlKey) lookUp()
     }
 
+    if (refInp.current) refInp.current.focus()
 
     addEventListener('click', clickHandler)
     addEventListener('keydown', keyHandler)
@@ -65,7 +43,7 @@ export default function App() {
       removeEventListener('keydown', keyHandler)
     }
 
-  }, [lookUp, dispel])
+  }, [visible])
   
 
 
@@ -81,12 +59,13 @@ export default function App() {
 
     <button 
       ref={refBtn}
-      className={visible? css.invisible : css.visible}
+      className={`${css.searchButton} ${visible? css.invisible : css.visible}`}
       onClick={lookUp}
-    > Search </button>
+    > <SearchIcon className={css.lookingGlass} /> </button>
 
     <input 
-      ref={refInp} type="text" className={visible? css.visible : css.invisible}
+      ref={refInp} type="text" 
+      className={`${css.searchBar} ${ visible? css.visible : css.invisible }`}
       value={state} onChange={(e)=>setState(e.target.value)} 
       placeholder="i.e.: 2025, taber, river, onda fria" 
     />
