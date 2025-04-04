@@ -55,20 +55,30 @@ export default function App() {
 
   return<div className={css.container}>
 
-    <h1>Conoce nuestro trabajo!</h1>
+    
 
     <button 
       ref={refBtn}
       className={`${css.searchButton} ${visible? css.invisible : css.visible}`}
       onClick={lookUp}
-    > <SearchIcon className={css.lookingGlass} /> </button>
+    > 
+      <h1>
+        <SearchIcon className={css.lookingGlass1} />
+        Conoce nuestro trabajo!
+      </h1>
+    </button>
 
-    <input 
-      ref={refInp} type="text" 
-      className={`${css.searchBar} ${ visible? css.visible : css.invisible }`}
-      value={state} onChange={(e)=>setState(e.target.value)} 
-      placeholder="i.e.: 2025, taber, river, onda fria" 
-    />
+
+    <div className={`${css.input} ${ visible? css.visible : css.invisible }`}>
+      <SearchIcon className={css.lookingGlass} />
+      <input 
+        ref={refInp} type="text" 
+        className={css.searchBar}
+        value={state} onChange={(e)=>setState(e.target.value)} 
+        placeholder="i.e.: 2025, taber, river, onda fria" 
+      />
+    </div>
+
     
     <div className={css.records}>
       { Portfolios.map((item)=> (
