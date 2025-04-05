@@ -1,0 +1,84 @@
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+
+.searchButton {
+  display:flex;
+  background: transparent;
+  align-self: center;
+  box-sizing: border-box;
+  border-radius: 50px;
+  cursor:pointer;
+  border: 1px solid transparent;
+}
+
+.searchButton > h1 {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  /*font-size: 3rem;*/
+  /*font-weight: 700;*/
+  line-height: 1.2;
+  letter-spacing: -.5px;
+  text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchButton:hover {
+  background-color: #1f1f1f;
+  transform:scale(1.01);
+}
+
+
+.input {
+  top:1vh;
+  bottom: 0;
+  left:0;
+  right:0;
+  display: flex;
+  position: fixed;
+  width: 90%;
+  justify-self: center;
+  box-sizing:content-box;
+}
+
+
+.lookingGlass {
+  fill:black;
+  width:  4vh;
+  height: 4vh;
+  pointer-events: none;
+  position: absolute;
+}
+
+
+.lookingGlass1 {
+  fill:white;
+  width:  4vh;
+  height: 4vh;
+  pointer-events: none;
+}
+
+
+.searchBar {
+  /*border-radius: 20px;*/
+  height:5vh;
+  width: 100vw;
+  box-sizing:border-box;
+  padding-left: 5vh;
+  background-color: white;
+  color:black;
+
+}
+
+
+

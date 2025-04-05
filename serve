@@ -1,2 +1,2 @@
 #!/bin/bash
-find docs/ -name Gemfile -execdir bundle exec jekyll serve \;
+find docs/ -name Gemfile -execdir bundle exec jekyll serve -H 192.168.0.233 \;
