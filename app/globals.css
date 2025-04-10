@@ -12,6 +12,10 @@ body {
   /*min-height: 100vh; */
 }
 
+button {
+  font-family: var(--font-bebas), sans-serif;
+}
+
 
 
 /*:root {*/
