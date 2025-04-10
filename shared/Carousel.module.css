@@ -31,7 +31,7 @@
 
 .carrouselElement:hover > img {
   transition: all 0.33s ease-out;
-  transform: scale(1.02);
+  transform: scale(0.97);
   cursor: pointer;
   z-index: 3;
 }

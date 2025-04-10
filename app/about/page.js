@@ -1,12 +1,9 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import {Card, Picture, Carousel, Showreels} from 'shared'
 import css from './page.module.css'
 export default function About() {
   return <>
-    <Link href={"/"}> <button>Home</button> </Link>
-    <Link href={"/hello"}> <button>Welcome!</button> </Link>
-    <Carousel collection={Showreels} upTo={1}/>
+    <Carousel collection={cards} upTo={1}/>
   </>
 }
 
@@ -20,7 +17,7 @@ const items = [
 
 //const cards = items.map((e, indx)=> <Card key={indx} items={e} thumb="/01.webp" />)
 const cards = [
-  <Card key={1} items={items} thumb="/01.webp" />,
+  <Card key={1} items={items} thumb="./castro.png" />,
 ]
 
 

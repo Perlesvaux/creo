@@ -2,7 +2,7 @@ import './globals.css'
 import Link from "next/link"
 import { Bebas_Neue, Play } from "next/font/google";
 import css from "./globals.module.css";
-import {Banner} from 'shared'
+import { Banner, NavBar } from 'shared'
 //import {Card, Picture, Carousel, Showreels} from 'shared'
 
 const bebasNeue = Bebas_Neue({
@@ -31,9 +31,7 @@ export default function RootLayout({ children }) {
 
         <header className={css.head}>
           <Banner />
-
-        <Link href={"/"}> <button>Home</button> </Link>
-        <Link href={"/deeds"}> <button>Portfolio</button> </Link>
+          <NavBar />
         </header>
 
         <main className={css.middle}>
