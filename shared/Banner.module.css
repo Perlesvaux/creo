@@ -1,0 +1,87 @@
+.banner {
+  text-align: center; /* Center the image */
+  position: relative;
+}
+
+.bannerImage {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.socials {
+  --size: 20px;
+  --fill: black;  
+  --button-color: gainsboro;
+  --single-color: #F0F0F0;
+  position: absolute;
+  left:1vh; /* Adjust as needed */
+  transform: translateY(-100%); 
+  display: flex;
+  column-gap: 0.5vh;
+}
+
+.socials > a > button {
+  border-radius: 5px;
+  border: 2.7px solid black;
+  background-color: var(--button-color);
+}
+
+
+.socials > a > button > img  {
+  fill:var(--fill);
+  width:var(--size);
+  height:var(--size);
+}
+
+.socials > a:hover > button {
+  background: rgb(131,58,180);
+  background: linear-gradient(150deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  border-radius: 7px;
+  transform:scale(1.5);
+  cursor:pointer;
+}
+
+
+.socials > a > button:focus {
+  background: rgb(131,58,180);
+  background: linear-gradient(150deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  border-radius: 7px;
+  transform:scale(1.5);
+  outline: 2px solid transparent;
+}
+
+
+/*.socials > a:hover > button > img  {*/
+/*  border-radius: 7px;*/
+/*  transform:scale(1.1)*/
+/*}*/
+
+
+/*.socials > a > button > svg  {*/
+/*  fill:var(--fill);*/
+/*  width:var(--size);*/
+/*  height:var(--size);*/
+/*}*/
+
+@media only screen and (max-width: 550px) {
+  .socials {
+    position: fixed;
+    /*top: 50%;     */
+    right: 0;   
+    bottom: 0; 
+    left: 0;   
+    /*transform: translateY(-50%); */
+    /*flex-direction: column;*/
+    row-gap: 0.5vh;
+
+    background-color: var(--single-color);
+    border-radius: 5px;
+    border: 2px solid black;
+    justify-content: center;
+    transform: translateY(0); 
+  }
+  .socials > a > button {
+    background-color: var(--single-color);
+    border: 3px solid transparent;
+  }
+}

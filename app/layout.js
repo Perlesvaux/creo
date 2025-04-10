@@ -1,5 +1,8 @@
+import Link from "next/link"
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import css from "./globals.module.css";
+import {Banner} from 'shared'
+//import {Card, Picture, Carousel, Showreels} from 'shared'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,9 +22,44 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body className={css.container}>
+
+        <header className={css.head}>
+          <Banner />
+
+        <Link href={"/"}> <button>Home</button> </Link>
+        <Link href={"/deeds"}> <button>Portfolio</button> </Link>
+        </header>
+
+        <main className={css.middle}>
+          { children }
+        </main>
+
+
+        <footer className={css.siteFooter}>
+          <div className={css.footerColWrapper}>
+            <h2 className={css.footerHeading}>Your Site Title</h2>
+            
+            <div className={css.footerCol}>
+              <p>© 2023 Your Name. All rights reserved.</p>
+            </div>
+            
+            <div className={css.footerCol}>
+              <ul className={css.socialMediaList}>
+                <li><a href="https://github.com/yourusername">GitHub</a></li>
+                <li><a href="https://twitter.com/yourusername">Twitter</a></li>
+                <li><a href="mailto:youremail@example.com">Email</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+          
+
+    </body>
     </html>
   );
 }
+
+      //<body className={`${geistSans.variable} ${geistMono.variable}`}>
+      //  {children}
+      //</body>

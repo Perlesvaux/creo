@@ -1,0 +1,169 @@
+.carrousel {
+  position: relative;
+  --offset-arrow:10vh;
+  --position-arrow:relative;
+  --e-border-radius:20px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--e-border-radius);
+  padding: 5px;
+  overflow: hidden; /* Ensure the sliding elements don't overflow */
+}
+
+.carrouselElement {
+  /*filter: drop-shadow(20px 35px 4px black);*/
+  position: relative;
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  width: 50vh;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, border-radius 0.2s ease-in-out ; /* Smooth transition */
+}
+
+.carrouselElement > img {
+  transition: all 0.33s ease-in;
+  transform: scale(0.9);
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: var(--e-border-radius);
+}
+
+.carrouselElement:hover > img {
+  transition: all 0.33s ease-out;
+  transform: scale(1.02);
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Slide animations */
+.next {
+  transform: translateX(10%) scale(0.77) rotate(10deg);
+  border-radius: 50px;
+  filter: blur(4px);
+}
+
+.prev {
+  transform: translateX(-10%) scale(0.77) rotate(-10deg);
+  filter: blur(4px);
+  /*animation: slideprev 0.2s linear;*/
+}
+
+.curr { 
+  /*transform: translate(0);*/
+  /*opacity: 1;*/
+
+}
+
+.left {
+  /*position:var(--position-arrow);*/
+  /*left:var(--offset-arrow);*/
+  /*display: flex;*/
+
+/*works fine!*/
+  z-index: 9;
+  /*margin-right: -10vh;*/
+  transform: translateX(10vh)
+}
+
+.right {
+  /*position:var(--position-arrow);*/
+  /*right:var(--offset-arrow);*/
+
+/*works fine!*/
+  z-index: 9;
+  transform: translateX(-10vh)
+  /*margin-left: -10vh;*/
+
+}
+
+/*.arrows {*/
+/*  position:absolute;*/
+/*  z-index: -1;*/
+/*  display: flex;*/
+/*  column-gap: 30vh;*/
+/*}*/
+/*.arrows > button {*/
+/*  z-index: 999;*/
+/*}*/
+
+@keyframes slideprev {
+  25% {transform: scale(0.1); opacity: 0.0;}
+  50% {transform: translate(200%) scale(1); opacity: 0.0;}
+  60% {transform: translate(200%) scale(1); opacity: 0.1;}
+  100%   {transform: translate(0);}
+
+}
+
+/*@keyframes slidenext {*/
+/*  from {transform: translateX(-200%);}*/
+/*  to   {transform: translateX(0);}*/
+/*}*/
+
+
+
+/*@media only screen and (max-width: 480px) {*/
+/*  .carrousel {*/
+/*    flex-direction: column;*/
+/*    row-gap: 10px;*/
+/*  }*/
+/*  .carrouselElement {*/
+/*    width: 33vh;*/
+/*  }*/
+/*}*/
+
+
+/*When prop vertical=true*/
+.vertical {
+    flex-direction: column;
+    row-gap: 10px;
+    padding-bottom: 5vh;
+}
+
+.vertical > .left{
+  position: absolute;
+  transform: translateX(-16vh);
+}
+
+.vertical > .left > button {
+  height: var(--size);
+  width: var(--size);
+}
+
+.vertical .right {
+  position: absolute;
+  transform: translateX(16vh);
+}
+.vertical .right > button {
+  height: var(--size);
+  width: var(--size);
+}
+
+
+
+
+@media only screen and (max-width: 820px) {
+  .carrousel {
+    --size:10vh;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .left{
+    position: absolute;
+    transform: translateX(-16vh);
+  }
+  .left > button {
+    height: var(--size);
+    width: var(--size);
+  }
+
+  .right {
+    position: absolute;
+    transform: translateX(16vh);
+  }
+  .right > button {
+    height: var(--size);
+    width: var(--size);
+  }
+}

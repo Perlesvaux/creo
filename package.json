@@ -2,6 +2,10 @@
   "name": "program-b",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "app/*",
+    "shared/*"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -9,13 +13,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.0"
+    "shared": "file:shared"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.3.0",
-    "@eslint/eslintrc": "^3"
+    "eslint-config-next": "15.3.0"
   }
 }
