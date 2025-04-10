@@ -1,17 +1,22 @@
+import './globals.css'
 import Link from "next/link"
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bebas_Neue, Play } from "next/font/google";
 import css from "./globals.module.css";
 import {Banner} from 'shared'
 //import {Card, Picture, Carousel, Showreels} from 'shared'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const bebasNeue = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bebas',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const play = Play({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-play',
+  display: 'swap',
 });
 
 export const metadata = {
@@ -22,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={css.container}>
+      <body className={`${bebasNeue.variable} ${play.variable} ${css.container}`}>
 
         <header className={css.head}>
           <Banner />
@@ -33,7 +38,6 @@ export default function RootLayout({ children }) {
 
         <main className={css.middle}>
           { children }
-        </main>
 
 
         <footer className={css.siteFooter}>
@@ -53,6 +57,9 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </footer>
+        </main>
+
+
           
 
     </body>

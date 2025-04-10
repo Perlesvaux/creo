@@ -1,6 +1,7 @@
 .banner {
   text-align: center; /* Center the image */
   position: relative;
+  /*z-index: 13;*/
 }
 
 .bannerImage {
@@ -18,6 +19,7 @@
   transform: translateY(-100%); 
   display: flex;
   column-gap: 0.5vh;
+  z-index: 13;
 }
 
 .socials > a > button {

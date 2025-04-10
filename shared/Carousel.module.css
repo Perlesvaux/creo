@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   border-radius: var(--e-border-radius);
-  padding: 5px;
+  /*padding: 5px;*/
   overflow: hidden; /* Ensure the sliding elements don't overflow */
 }
 
@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
   aspect-ratio: 16 / 9;
-  width: 50vh;
+  width: 48vh;
   transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, border-radius 0.2s ease-in-out ; /* Smooth transition */
 }
 
