@@ -1,8 +1,9 @@
+//import Head from "next/head"
 import './globals.css'
 import Link from "next/link"
 import { Bebas_Neue, Play } from "next/font/google";
 import css from "./globals.module.css";
-import { Banner, NavBar } from 'shared'
+import { Banner, NavBar, Footer } from 'shared'
 //import {Card, Picture, Carousel, Showreels} from 'shared'
 
 const bebasNeue = Bebas_Neue({
@@ -27,40 +28,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="./icon.svg"
+        />
+      </head>
       <body className={`${bebasNeue.variable} ${play.variable} ${css.container}`}>
-
         <header className={css.head}>
           <Banner />
           <NavBar />
         </header>
-
         <main className={css.middle}>
           { children }
-
-
-        <footer className={css.siteFooter}>
-          <div className={css.footerColWrapper}>
-            <h2 className={css.footerHeading}>Your Site Title</h2>
-            
-            <div className={css.footerCol}>
-              <p>© 2023 Your Name. All rights reserved.</p>
-            </div>
-            
-            <div className={css.footerCol}>
-              <ul className={css.socialMediaList}>
-                <li><a href="https://github.com/yourusername">GitHub</a></li>
-                <li><a href="https://twitter.com/yourusername">Twitter</a></li>
-                <li><a href="mailto:youremail@example.com">Email</a></li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+          <Footer />
         </main>
-
-
-          
-
-    </body>
+      </body>
     </html>
   );
 }

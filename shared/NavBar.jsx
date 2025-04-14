@@ -14,5 +14,6 @@ export default function NavBar(){
     { routes.map(({href, title}, index) => 
         <Link key={index} href={href}> <button> {title} </button> </Link> )
     }
+    <span></span>
   </div>
 }
