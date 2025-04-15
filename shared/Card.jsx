@@ -9,7 +9,7 @@ export default function Card({thumb, items, desc}) {
   const close = () => setIsOpen(false)
 
   return  <>
-    <img src={thumb} onClick={open} />
+    <img src={thumb} onClick={open} loading="lazy" />
     { desc && <span className={css.desc}>{desc}</span> }
     <Modal active={isOpen} setter={close} items={items} />
   </> 

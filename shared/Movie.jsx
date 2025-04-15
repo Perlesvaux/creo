@@ -25,5 +25,6 @@ export default function Movie ({src, poster}){
     }
   }, [])
 
-  return <video src={src} controls poster={poster} ref={ref} />
+  //return <video src={src} controls poster={poster} ref={ref}  />
+  return <video src={src} controls poster={poster} ref={ref} loading="lazy" preload="none" />
 }
