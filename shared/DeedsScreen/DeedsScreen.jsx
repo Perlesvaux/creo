@@ -1,12 +1,12 @@
 "use client"
 import { useState } from 'react'
-import { Portfolios } from 'shared'
+//import { Portfolios } from 'shared'
 //import SearchIcon from './SearchIcon.jsx'
 import css from './DeedsScreen.module.css'
 import LookUp from './LookUp.jsx'
 
 
-export default function DeedsScreen() {
+export default function DeedsScreen({ portfolios }) {
   const [state, setState] = useState("")
 
   const filterByTags = (e) => {
@@ -20,7 +20,7 @@ export default function DeedsScreen() {
     <LookUp value={state} setter={setState} />
 
     <div className={css.records}>
-      { Portfolios.map((item)=> (
+      { portfolios.map((item)=> (
         <div key={item.props.tags.toLowerCase()} >{item}</div>
       )).filter(e => filterByTags(e.key) ) }
     </div>

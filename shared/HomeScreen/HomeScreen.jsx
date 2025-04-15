@@ -1,5 +1,6 @@
 import styles from './HomeScreen.module.css';
-import { Carousel, Portfolios, Showreels } from 'shared'
+//import { Carousel, Portfolios, Showreels } from 'shared'
+import { Carousel } from 'shared'
 import Coffee from './Coffee.jsx'
 import FireButton from './FireButton.jsx'
 import Brewer from './Brewer.jsx'
@@ -9,10 +10,10 @@ import Quotes from './Quotes.jsx'
 
 
 
-export default function HomeScreen() {
+export default function HomeScreen( { portfolios, showreels } ) {
 
-  if (!Portfolios) return <div> loading ...</div>
-  if (!Showreels) return <div> loading ...</div>
+  if (!portfolios) return <div> loading ...</div>
+  if (!showreels) return <div> loading ...</div>
 
 
   return (
@@ -30,15 +31,15 @@ export default function HomeScreen() {
           </p>
 
           <div className={styles.presentation}>
-            <Carousel collection={Showreels} upTo={1} vertical={true} />
+            <Carousel collection={showreels} upTo={1} vertical={true} />
             <Quotes />
           </div>
 
           <FireButton className={styles.heroButton}>Let's brew something <Brewer/></FireButton>
 
           <div className={styles.deeds}>
-            <div className={styles.portfolios}><Carousel collection={Portfolios} upTo={1} vertical={true} /> </div>
-            <div className={styles.logofolios}><Carousel collection={Showreels} upTo={1}  vertical={true} /></div>
+            <div className={styles.portfolios}><Carousel collection={portfolios} upTo={1} vertical={true} /> </div>
+            <div className={styles.logofolios}><Carousel collection={showreels} upTo={1}  vertical={true} /></div>
           </div>
 
           <h2 className={styles.heroSubtitle}>Conocenos!</h2>
