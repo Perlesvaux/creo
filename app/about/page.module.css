@@ -8,3 +8,52 @@
 /*  height: 25vw;*/
 /*}*/
 /**/
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  justify-content: center;
+}
+
+.about > h1 {
+  font-size: 3rem;
+  font-weight: 700; /* Manrope Bold */
+  /*margin-bottom: 1.5rem;*/
+  /*line-height: 1;*/
+  padding:0.5em 0 0 0;
+  margin: 0;
+  letter-spacing: -0.5px; /* Slightly tighter for modernity */
+}
+.about > h2 {
+  /*line-height: 1;*/
+  font-size: 2rem;
+  font-weight: 700; /* Manrope Bold */
+  padding:0;
+  margin: 0;
+  letter-spacing: -0.5px; /* Slightly tighter for modernity */
+}
+
+.about > p {
+  line-height: 1.5;
+  margin:0;
+  padding: 1em 3em 3em 3em;
+}
+
+.about > hr {
+  width: 100%;
+}
+
+
+.map {
+  width: 100%;
+  /*margin:0;*/
+  padding: 1em 3em 3em 3em;
+}
+
+

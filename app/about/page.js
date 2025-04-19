@@ -1,35 +1,33 @@
 import Image from 'next/image'
-import {Card, Picture, Carousel, Showreels} from 'shared'
 import css from './page.module.css'
 export default function About() {
-  return <>
-    <Carousel collection={cards} upTo={1}/>
-  </>
+  return <section className={css.container}>
+    <div className={css.about}>
+      <h1>¿Quiénes somos?</h1>
+      <p>¡8 años de creatividad imparable! Creemos en el poder de las ideas. Creamos soluciones que dejan huella.
+      Nuestra especialidad: destacar en un mundo lleno de ruido.
+      ¿Listo para hablar de tu marca? Nosotros ponemos el café. 😉☕</p>
+
+      <h2>Nuestra especialidad</h2>
+      <p><i>Branding, Diseño Multimedia, Diseño Web y Redes Sociales</i></p>
+
+      <h2>Encuentranos</h2>
+
+
+      <div className="flex-1 relative">
+          <a href="https://www.bing.com/maps?where=San%20Salvador%2C%20San%20Salvador%201101%2C%20SV" target="_blank" rel="noopener noreferrer" tabIndex="-1">
+              <div className={css.map}>
+                  <div id="ember1246" className="ember-view   full-height">
+                      <img src="https://dev.virtualearth.net/REST/v1/Imagery/Map/CanvasLight/San%20Salvador,%20San%20Salvador,%201101,%20SV?key=Atn679uHwJz5qBW7Qdydz8-WNiejypvCQM1WRC94l9MtNSsBeNwHcLXzUAfFPaBr&amp;mapSize=760,350" alt="Map of  San Salvador, San Salvador 1101, SV" className="org-location-map__image" />
+                  </div>
+              </div>
+          </a>
+      </div>
+
+
+    <hr/>
+
+  </div>
+
+  </section>
 }
-
-const items = [
-
-    <Picture key="1" src="/01.webp" alt="Showreel 2016 Front" />,
-    <Picture key="2" src="/01.webp" alt="Showreel 2016 Front" />,
-    <Picture key="3" src="/01.webp" alt="Showreel 2016 Front" />,
-  
-]
-
-//const cards = items.map((e, indx)=> <Card key={indx} items={e} thumb="/01.webp" />)
-const cards = [
-  <Card key={1} items={items} thumb="./castro.png" />,
-]
-
-
-
-
-    //<Image
-    //  src="/castro.png"
-    //  alt="Super Muscular JAPR & Castro"
-    //  className="object-fit"
-    //  //height={1000}
-    //  //width={800}
-    //  fill
-    //
-    //  sizes="(max-width: 768px) 100vw, 50vw"
-    ///>

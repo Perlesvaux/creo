@@ -2,8 +2,9 @@
 h1, h2, h3, h4, h5, h6,
 button > h1
 {
+  letter-spacing: -0.5px; /* Slightly tighter for modernity */
   font-family: var(--font-bebas), sans-serif;
-  text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6);
+  /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);*/
 }
 
 html,
@@ -19,6 +20,10 @@ button {
   font-family: var(--font-bebas), sans-serif;
 }
 
+p {
+  /*margin: 0;*/
+  /*padding: 0;*/
+}
 
 
 
