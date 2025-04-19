@@ -37,7 +37,7 @@
 }
 
 .heroContent {
-  max-width: var(--wide);
+  max-width: 800px;
 }
 
 .heroTitle {
