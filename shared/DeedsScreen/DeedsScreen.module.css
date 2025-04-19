@@ -43,6 +43,8 @@
 
 
 .records {
+
+  /*transform:scale(0.9);*/
   background-color: rgba(69, 69, 69, 0.66);
   padding: 5vh 0 5vh 0;
  /* Enables scrolling */

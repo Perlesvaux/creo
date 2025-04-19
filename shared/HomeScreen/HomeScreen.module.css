@@ -44,7 +44,7 @@
   font-size: 3rem;
   font-weight: 700; /* Manrope Bold */
   /*margin-bottom: 1.5rem;*/
-  line-height: 1.2;
+  line-height: 0;
   letter-spacing: -0.5px; /* Slightly tighter for modernity */
 }
 

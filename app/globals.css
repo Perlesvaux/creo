@@ -1,6 +1,9 @@
 /* For titles */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+button > h1
+{
   font-family: var(--font-bebas), sans-serif;
+  text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 html,
@@ -15,6 +18,9 @@ body {
 button {
   font-family: var(--font-bebas), sans-serif;
 }
+
+
+
 
 
 
