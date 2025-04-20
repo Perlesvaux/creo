@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 import {useState, useRef, useEffect} from 'react'
 import css from './Picture.module.css'
 export default function Picture ({src, alt}){
@@ -41,9 +42,9 @@ export default function Picture ({src, alt}){
 
 
   return <>
-    <img src={src} alt={alt}  onClick={toggleZoom} className={css.pic} loading="lazy" />
+    <Image src={src} alt={alt}  onClick={toggleZoom} className={css.pic} loading="lazy" width={100} height={100} />
       <dialog ref={ref} onClose={(e)=>{toggleOff() ; e.stopPropagation()}} className={css.modal} > 
-        <img src={src} alt={alt} onClick={toggleOff} className={css.bigscreen} loading="lazy"  />
+        <Image src={src} alt={alt} onClick={toggleOff} className={css.bigscreen} loading="lazy" width={1920} height={1080} />
       </dialog>
   </>
 

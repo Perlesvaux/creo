@@ -5,7 +5,8 @@
   height:auto;
   border: 1px solid transparent;
   color-scheme: light dark;
-  background-color: #000000;
+  /*background-color: #000000;*/
+  background-color: light-dark(white, #000000);
   /*background-color: light-dark(#2D2D2D, #000000);*/
   /*overflow-y: hidden;*/
   overscroll-behavior: contain;
