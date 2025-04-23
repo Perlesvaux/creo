@@ -1,27 +1,61 @@
 "use client"
 import { Card, Picture, Movie } from 'shared'
 // /creo-digital-agency/
-const showreelFront2025    = '/showreel_2025/front.webp'; 
-const showreelBack2025     = '/showreel_2025/back.webp';
-const showreelVideo2025    = '/showreel_2025/video.mp4';
-const showreelFront2024    = '/showreel_2024/front.webp'; 
-const showreelBack2024     = '/showreel_2024/back.webp';
-const showreelVideo2024    = '/showreel_2024/video.mp4';
-const showreelFront2023    = '/showreel_2023/front.webp'; 
-const showreelBack2023     = '/showreel_2023/back.webp';
-const showreelVideo2023    = '/showreel_2023/video.mp4';
-const showreelFront2022    = '/showreel_2022/front.webp'; 
-const showreelVideo2022    = '/showreel_2022/video.mp4'; 
-const showreelFront2021    = '/showreel_2021/front.webp'; 
-const showreelBack2021     = '/showreel_2021/back.webp';
-const showreelVideo2021    = '/showreel_2021/video.mp4';
-const showreelFront2020    = '/showreel_2020/front.webp'; 
-const showreelBack2020     = '/showreel_2020/back.webp';
-const showreelVideo2020    = '/showreel_2020/video.mp4';
-const showreelFront2016    = '/showreel_2016/front.webp'; 
-const showreelBack2016     = '/showreel_2016/back.webp';
-const showreelVideo2016    = '/showreel_2016/video.mp4';
-const posterCREO           = '/poster.webp'
+
+// 2025
+import showreelFront2025    from  '../public/showreel_2025/front.webp'; 
+import showreelBack2025     from  '../public/showreel_2025/back.webp';
+const showreelVideo2025    =  '../public/showreel_2025/video.mp4';
+
+// 2024
+import showreelFront2024    from  '../public/showreel_2024/front.webp'; 
+import showreelBack2024     from  '../public/showreel_2024/back.webp';
+const showreelVideo2024    =  '../public/showreel_2024/video.mp4';
+
+// 2023
+import showreelFront2023    from  '../public/showreel_2023/front.webp'; 
+import showreelBack2023     from  '../public/showreel_2023/back.webp';
+const showreelVideo2023    =  '/showreel_2023/video.mp4';
+// 2022
+import showreelFront2022    from  '../public/showreel_2022/front.webp'; 
+const showreelVideo2022    =  '/showreel_2022/video.mp4'; 
+// 2021
+import showreelFront2021    from  '../public/showreel_2021/front.webp'; 
+import showreelBack2021     from  '../public/showreel_2021/back.webp';
+const showreelVideo2021    =  '/showreel_2021/video.mp4';
+// 2020
+import showreelFront2020    from  '../public/showreel_2020/front.webp'; 
+import showreelBack2020     from  '../public/showreel_2020/back.webp';
+const showreelVideo2020    =  '/showreel_2020/video.mp4';
+// 2016
+import showreelFront2016    from  '../public/showreel_2016/front.webp'; 
+import showreelBack2016     from  '../public/showreel_2016/back.webp';
+const showreelVideo2016    =  '/showreel_2016/video.mp4';
+
+// Poster image
+import posterCREO           from  '../public/poster.webp'
+
+//const showreelFront2025    = '/showreel_2025/front.webp'; 
+//const showreelBack2025     = '/showreel_2025/back.webp';
+//const showreelVideo2025    = '/showreel_2025/video.mp4';
+//const showreelFront2024    = '/showreel_2024/front.webp'; 
+//const showreelBack2024     = '/showreel_2024/back.webp';
+//const showreelVideo2024    = '/showreel_2024/video.mp4';
+//const showreelFront2023    = '/showreel_2023/front.webp'; 
+//const showreelBack2023     = '/showreel_2023/back.webp';
+//const showreelVideo2023    = '/showreel_2023/video.mp4';
+//const showreelFront2022    = '/showreel_2022/front.webp'; 
+//const showreelVideo2022    = '/showreel_2022/video.mp4'; 
+//const showreelFront2021    = '/showreel_2021/front.webp'; 
+//const showreelBack2021     = '/showreel_2021/back.webp';
+//const showreelVideo2021    = '/showreel_2021/video.mp4';
+//const showreelFront2020    = '/showreel_2020/front.webp'; 
+//const showreelBack2020     = '/showreel_2020/back.webp';
+//const showreelVideo2020    = '/showreel_2020/video.mp4';
+//const showreelFront2016    = '/showreel_2016/front.webp'; 
+//const showreelBack2016     = '/showreel_2016/back.webp';
+//const showreelVideo2016    = '/showreel_2016/video.mp4';
+//const posterCREO           = '/poster.webp'
 
 
 const showreel_2025 = () => {
@@ -101,13 +135,32 @@ const showreel_2016 = () => {
 };
 
 export default  [
-  showreel_2025(),
-  showreel_2024(),
-  showreel_2023(),
-  showreel_2022(),
-  showreel_2021(),
-  showreel_2020(),
-  showreel_2016(),
+  <Showreel
+    front={ {src:showreelFront2025, alt: 'Front cover of 2025 CREO Showreel'} }
+    back={ {src:showreelBack2025, alt: 'Front cover of 2025 CREO Showreel'} }
+    video={showreelVideo2025}
+    desc="Showreel 2025"
+  />,
+
+  //showreel_2025(),
+  //showreel_2024(),
+  //showreel_2023(),
+  //showreel_2022(),
+  //showreel_2021(),
+  //showreel_2020(),
+  //showreel_2016(),
 
 ]
 
+
+function Showreel ({front, back, video, desc}){
+
+  const items =  [
+    <Picture key="1" src={front.src} alt={front.alt} />,
+    <Movie   key="2" src={video} controls poster={posterCREO} />,
+    <Picture key="3" src={back.src} alt={back.alt}/>,
+  ];
+
+  return <Card thumb={front.src} alt={desc} items={items} desc={desc} />
+
+}

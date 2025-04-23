@@ -65,6 +65,7 @@
   transform: scale(0.9);
   background-color: #f1f1f1;
   width: 30vw;
+  height: auto;
   border-radius: 20px;
   /*transform: rotate(-2deg) ;*/
   /*margin-left: -300px;*/
@@ -72,6 +73,16 @@
   opacity: 0.9;
   
 }
+
+
+/*.carrouselElement > img {*/
+/*  transition: all 0.33s ease-in;*/
+/*  transform: scale(0.9);*/
+/*  aspect-ratio: 16 / 9;*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*  border-radius: var(--e-border-radius);*/
+/*}*/
 
 
 
