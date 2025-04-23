@@ -84,6 +84,7 @@ import p22deportivo           from '../public/portfolio_2022_deportivo/portfolio
 
 
 const _2025 = {
+  alt:'Portfolio 2025',
   desc:'Portfolio 2025',
   tags:'2025 Portafolio taber tu futura casa impac records b & c luxury auto',
   thumb: portfolio2025_front,
@@ -142,6 +143,7 @@ const _2025 = {
 }
 
 const _2024 = {
+  alt:'Portfolio 2024',
   desc:'Portfolio 2024',
   tags:'2024 Portafolio elevate igt impac records taber tu futura casa',
   thumb:portfolio2024_front,
@@ -158,6 +160,7 @@ const _2024 = {
 }
 
 const _2023 = {
+  alt: 'Portafolio 2023',
   desc: 'Portafolio 2023',
   tags: '2023 Portafolio fishchips fish chips elevate charlie marlin la valenciana onda fria river plate sv taber uno phone technology chaineado',
   thumb: portfolio2023_front,
@@ -179,13 +182,15 @@ const _2023 = {
 }
 
 const _2022_comercial = {
-  tags: '2022 Portafolio Comercial insurance group of texas onda fria uno chaineado la valenciana here and now english taber', 
+  alt: 'Portafolio Comercial 2022',
   desc: 'Portafolio Comercial 2022',
+  tags: '2022 Portafolio Comercial insurance group of texas onda fria uno chaineado la valenciana here and now english taber', 
   thumb: portfolio2022_front,
   content : [ {src: p22comercial, alt: 'Portfolio 2022 - Comercial' } ],
 }
 
 const _2022_deportivo = {
+  alt: 'Portafolio Deportivo 2022',
   desc: 'Portafolio Deportivo 2022',
   tags: '2022 Portafolio Deportivo river plate sv dribling',
   thumb:portfolio2022_front,
@@ -200,7 +205,8 @@ export default [
   _2022_comercial,
   _2022_deportivo
 
-].map(({desc, tags, thumb, content}, index)=> <Portfolio 
+].map(({desc, tags, thumb, content, alt}, index)=> <Portfolio 
+  alt={alt}
   desc={desc}
   tags={tags}
   thumb={thumb}
@@ -209,9 +215,9 @@ export default [
 />)
 
 
-function Portfolio ({thumb, content, tags, desc}){
+function Portfolio ({thumb, content, tags, desc, alt}){
   const items = content.map(({src, alt}, index) => <Picture key={index} src={src} alt={alt}/>)
-  return <Card thumb={thumb} alt={desc} items={items} desc={desc} tags={tags}/>
+  return <Card thumb={thumb} alt={alt} items={items} desc={desc} tags={tags}/>
 }
 
 
