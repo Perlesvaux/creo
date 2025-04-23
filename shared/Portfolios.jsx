@@ -1,6 +1,5 @@
-"use client"
 import { Card, Picture } from 'shared'
-// /creo-digital-agency/
+
 // 2025
 import portfolio2025_back   from '../public/portfolio_2025/back.webp';
 import portfolio2025_front  from '../public/portfolio_2025/front.webp';
@@ -64,100 +63,89 @@ import taber2_24           from  '../public/portfolio_2024/taber2.webp'
 import tufuturacasa24      from  '../public/portfolio_2024/tufuturacasa.webp'
 
 //2023
-const portfolio2023_back     = '/portfolio_2023/back.webp'
-const portfolio2023_front    = '/portfolio_2023/front.webp'
-const chaineado23            = '/portfolio_2023/chaineado.webp'
-const charliemarlin23        = '/portfolio_2023/charliemarlin.webp'
-const elevate23              = '/portfolio_2023/elevate.webp'
-const fishchips23            = '/portfolio_2023/fishchips.webp'
-const igt23                  = '/portfolio_2023/igt.webp'
-const lavalenciana23         = '/portfolio_2023/lavalenciana.webp'
-const ondafria23             = '/portfolio_2023/ondafria.webp'
-const phonetechnology503_23  = '/portfolio_2023/phonetechnology503.webp'
-const riversv23              = '/portfolio_2023/riversv.webp'
-const taber_23               = '/portfolio_2023/taber1.webp'
-const uno23                  = '/portfolio_2023/uno.webp'
+import portfolio2023_back     from '../public/portfolio_2023/back.webp'
+import portfolio2023_front    from '../public/portfolio_2023/front.webp'
+import chaineado23            from '../public/portfolio_2023/chaineado.webp'
+import charliemarlin23        from '../public/portfolio_2023/charliemarlin.webp'
+import elevate23              from '../public/portfolio_2023/elevate.webp'
+import fishchips23            from '../public/portfolio_2023/fishchips.webp'
+import igt23                  from '../public/portfolio_2023/igt.webp'
+import lavalenciana23         from '../public/portfolio_2023/lavalenciana.webp'
+import ondafria23             from '../public/portfolio_2023/ondafria.webp'
+import phonetechnology503_23  from '../public/portfolio_2023/phonetechnology503.webp'
+import riversv23              from '../public/portfolio_2023/riversv.webp'
+import taber_23               from '../public/portfolio_2023/taber1.webp'
+import uno23                  from '../public/portfolio_2023/uno.webp'
 
 //2022
-const portfolio2022_front    = '/showreel_2022/front.webp'
-const p22comercial           = '/portfolio_2022_comercial/portfolio.webp'
-const p22deportivo           = '/portfolio_2022_deportivo/portfolio.webp'
+import portfolio2022_front    from '../public/showreel_2022/front.webp'
+import p22comercial           from '../public/portfolio_2022_comercial/portfolio.webp'
+import p22deportivo           from '../public/portfolio_2022_deportivo/portfolio.webp'
 
 
-//const portfolio_2025 = ()=>{
-//
-//const tags = "2025 Portafolio taber tu futura casa impac records b & c luxury auto "
-//
-//const items = [
-//  portfolio2025_front,
-//  taber_banner, taber_1, taber_2, taber_3, taber_4, taber_5, taber_6, taber_7, taber_8, taber_9, taber_10, taber_11, taber_12, taber_13, taber_14, taber_15, taber_16, taber_17,
-//  bc_banner, bc_1, bc_2, bc_3, bc_4, bc_5, bc_6, bc_7, bc_8, bc_9,
-//  tufuturacasa_banner, tufuturacasa_1, tufuturacasa_2, tufuturacasa_3, tufuturacasa_4, tufuturacasa_5, tufuturacasa_6, tufuturacasa_7, tufuturacasa_8, tufuturacasa_9,
-//  impactrecords_banner, impactrecords_1, impactrecords_2, impactrecords_3, impactrecords_4, impactrecords_5, impactrecords_6, impactrecords_7, impactrecords_8,  impactrecords_9,
-//  portfolio2025_back,
-//].map((e, i) => <Picture key={i} src={e}/>)
-//1
-//  return <Card key="1" thumb={portfolio2025_front} items={items} tags={tags} />
-//}
-
-const portfolio_2024 = ()=>{
-
-  const tags = "2024 Portafolio elevate igt impac records taber tu futura casa"
-
-  const items = [portfolio2024_front,elevate24,igt24,impacrecords24,taber1_24,taber2_24,tufuturacasa24,portfolio2024_back]
-    .map((e, i) => <Picture key={i} src={e}/>)
-
-  return <Card key="2" thumb={portfolio2024_front} items={items} tags={tags} />
+const _2025 = {
+  desc:'Portfolio 2025',
+  tags:'2025 Portafolio taber tu futura casa impac records b & c luxury auto',
+  thumb: portfolio2025_front,
+  content: [
+    { src: portfolio2025_front, alt:'' },
+    { src: taber_banner, alt:'' },
+    { src: taber_1, alt:'' },
+    { src: taber_2, alt:'' },
+    { src: taber_3, alt:'' },
+    { src: taber_4, alt:'' }, 
+    { src: taber_5, alt:'' },
+    { src: taber_6, alt:'' },
+    { src: taber_7, alt:'' },
+    { src: taber_8, alt:'' },
+    { src: taber_9, alt:'' },
+    { src: taber_10, alt:'' },
+    { src: taber_11, alt:'' },
+    { src: taber_12, alt:'' },
+    { src: taber_13, alt:'' },
+    { src: taber_14, alt:'' },
+    { src: taber_15, alt:'' },
+    { src: taber_16, alt:'' },
+    { src: taber_17, alt:'' },
+    { src: bc_banner, alt:'' },
+    { src: bc_1, alt:'' },
+    { src: bc_2, alt:'' },
+    { src: bc_3, alt:'' },
+    { src: bc_4, alt:'' },
+    { src: bc_5, alt:'' },
+    { src: bc_6, alt:'' },
+    { src: bc_7, alt:'' },
+    { src: bc_8, alt:'' },
+    { src: bc_9, alt:'' },
+    { src: tufuturacasa_banner, alt:'' },
+    { src: tufuturacasa_1, alt:'' },
+    { src: tufuturacasa_2, alt:'' },
+    { src: tufuturacasa_3, alt:'' },
+    { src: tufuturacasa_4, alt:'' },
+    { src: tufuturacasa_5, alt:'' },
+    { src: tufuturacasa_6, alt:'' },
+    { src: tufuturacasa_7, alt:'' },
+    { src: tufuturacasa_8, alt:'' },
+    { src: tufuturacasa_9, alt:'' },
+    { src: impactrecords_banner, alt:'' },
+    { src: impactrecords_1, alt:'' },
+    { src: impactrecords_2, alt:'' },
+    { src: impactrecords_3, alt:'' },
+    { src: impactrecords_4, alt:'' },
+    { src: impactrecords_5, alt:'' },
+    { src: impactrecords_6, alt:'' },
+    { src: impactrecords_7, alt:'' },
+    { src: impactrecords_8, alt:'' },
+    { src: impactrecords_9, alt:'' },
+    { src: portfolio2025_back, alt:'' },
+  ]
 }
 
-
-//const portfolio_2023 = ()=>{
-//
-//  const tags = "2023 Portafolio fishchips fish chips elevate charlie marlin la valenciana onda fria river plate sv taber uno phone technology chaineado"
-//
-//  const items = [
-//    portfolio2023_front,chaineado23,charliemarlin23,elevate23,fishchips23,igt23,lavalenciana23,ondafria23
-//    ,phonetechnology503_23,riversv23,taber_23,uno23,portfolio2023_back
-//  ]
-//  .map((e, i) => <Picture key={i} src={e}/>)
-//
-//  return <Card key="2" thumb={portfolio2023_front} items={items} tags={tags} />
-//}
-//
-//const portfolio_2022_comercial = () => {
-//
-//  const tags = "2022 Portafolio Comercial insurance group of texas onda fria uno chaineado la valenciana here and now english taber" 
-//
-//  const desc = "Portafolio Comercial 2022" 
-//
-//  const items = [
-//    p22comercial
-//  ].map((e, i) => <Picture key={i} src={e}/>)
-//
-//  return <Card key="3" thumb={portfolio2022_front}  items={items} desc={desc} tags={tags}/>
-//}
-//
-//const portfolio_2022_deportivo = () => {
-//
-//  const tags = "2022 Portafolio Deportivo river plate sv dribling " 
-//
-//  const desc = "Portafolio Deportivo 2022" 
-//
-//  const items = [
-//    p22deportivo
-//  ].map((e, i) => <Picture key={i} src={e}/>)
-//
-//  return <Card key="3" thumb={portfolio2022_front} items={items} desc={desc} tags={tags}/>
-//}
-
-
-
-export default [
-  //portfolio_2025(),
-
-<Portfolio 
-  thumb={portfolio2024_front}
-  content={ [
+const _2024 = {
+  desc:'Portfolio 2024',
+  tags:'2024 Portafolio elevate igt impac records taber tu futura casa',
+  thumb:portfolio2024_front,
+  content: [
     { src: portfolio2024_front, alt: 'Front cover of 2024 CREO Portfolio' },
     { src: elevate24, alt: 'Elevate Academy spot 2024' },
     { src: igt24, alt: 'IGT publicitary spot 2024' },
@@ -166,28 +154,64 @@ export default [
     { src: taber2_24, alt: 'Tabernaculo Biblico Bautista spot 2024' },
     { src: tufuturacasa24, alt: 'Tu Futura Casa spot 2024' },
     { src: portfolio2024_back, alt: 'Back side of 2024 CREO Portfolio' },
-  ] }
-  tags='2024 Portafolio elevate igt impac records taber tu futura casa'
-  desc='Portfolio 2024'
-/>,
+  ] 
+}
 
-  //portfolio_2024(),
-  //portfolio_2023(),
-  //portfolio_2022_comercial(),
-  //portfolio_2022_deportivo(),
+const _2023 = {
+  desc: 'Portafolio 2023',
+  tags: '2023 Portafolio fishchips fish chips elevate charlie marlin la valenciana onda fria river plate sv taber uno phone technology chaineado',
+  thumb: portfolio2023_front,
+  content : [
+    { src: portfolio2023_front, alt: 'Front cover of 2023 CREO Portfolio'},
+    { src: chaineado23, alt: 'Chaineado'},
+    { src: charliemarlin23,alt: 'Charlie Marlin'},
+    { src: elevate23,alt: 'Elevate Academy'},
+    { src: fishchips23,alt: 'Fishchips'},
+    { src: igt23,alt: 'IGT'},
+    { src: lavalenciana23,alt: 'La Valenciana'},
+    { src: ondafria23,alt: 'Onda Fria'},
+    { src: phonetechnology503_23,alt: 'PhoneTechnology 503'},
+    { src: riversv23,alt: 'River sv'},
+    { src: taber_23,alt: 'Tabernaculo Bilblico Bautista'},
+    { src: uno23,alt: 'Gasolinera Uno'},
+    { src: portfolio2023_back, alt: 'Back side of 2023 CREO Portfolio'}
+  ]
+}
 
-]
+const _2022_comercial = {
+  tags: '2022 Portafolio Comercial insurance group of texas onda fria uno chaineado la valenciana here and now english taber', 
+  desc: 'Portafolio Comercial 2022',
+  thumb: portfolio2022_front,
+  content : [ {src: p22comercial, alt: 'Portfolio 2022 - Comercial' } ],
+}
 
+const _2022_deportivo = {
+  desc: 'Portafolio Deportivo 2022',
+  tags: '2022 Portafolio Deportivo river plate sv dribling',
+  thumb:portfolio2022_front,
+  content : [ {src: p22deportivo, alt: 'Portfolio 2022 - Sports' } ],
+}
+
+
+export default [
+  _2025,
+  _2024,
+  _2023,
+  _2022_comercial,
+  _2022_deportivo
+
+].map(({desc, tags, thumb, content}, index)=> <Portfolio 
+  desc={desc}
+  tags={tags}
+  thumb={thumb}
+  content={content}
+  key={index}
+/>)
 
 
 function Portfolio ({thumb, content, tags, desc}){
-
-  //const tags = "2022 Portafolio Comercial insurance group of texas onda fria uno chaineado la valenciana here and now english taber" 
-
-  //const desc = "Portafolio Comercial 2022" 
-
   const items = content.map(({src, alt}, index) => <Picture key={index} src={src} alt={alt}/>)
-
   return <Card thumb={thumb} alt={desc} items={items} desc={desc} tags={tags}/>
-
 }
+
+

@@ -1,6 +1,4 @@
-"use client"
 import { Card, Picture, Movie } from 'shared'
-// /creo-digital-agency/
 
 // 2025
 import showreelFront2025    from  '../public/showreel_2025/front.webp'; 
@@ -34,28 +32,6 @@ const showreelVideo2016    =  '/showreel_2016/video.mp4';
 
 // Poster image
 import posterCREO           from  '../public/poster.webp'
-
-//const showreelFront2025    = '/showreel_2025/front.webp'; 
-//const showreelBack2025     = '/showreel_2025/back.webp';
-//const showreelVideo2025    = '/showreel_2025/video.mp4';
-//const showreelFront2024    = '/showreel_2024/front.webp'; 
-//const showreelBack2024     = '/showreel_2024/back.webp';
-//const showreelVideo2024    = '/showreel_2024/video.mp4';
-//const showreelFront2023    = '/showreel_2023/front.webp'; 
-//const showreelBack2023     = '/showreel_2023/back.webp';
-//const showreelVideo2023    = '/showreel_2023/video.mp4';
-//const showreelFront2022    = '/showreel_2022/front.webp'; 
-//const showreelVideo2022    = '/showreel_2022/video.mp4'; 
-//const showreelFront2021    = '/showreel_2021/front.webp'; 
-//const showreelBack2021     = '/showreel_2021/back.webp';
-//const showreelVideo2021    = '/showreel_2021/video.mp4';
-//const showreelFront2020    = '/showreel_2020/front.webp'; 
-//const showreelBack2020     = '/showreel_2020/back.webp';
-//const showreelVideo2020    = '/showreel_2020/video.mp4';
-//const showreelFront2016    = '/showreel_2016/front.webp'; 
-//const showreelBack2016     = '/showreel_2016/back.webp';
-//const showreelVideo2016    = '/showreel_2016/video.mp4';
-//const posterCREO           = '/poster.webp'
 
 
 const showreel_2025 = () => {
@@ -139,7 +115,7 @@ export default  [
     front={ {src:showreelFront2025, alt: 'Front cover of 2025 CREO Showreel'} }
     back={ {src:showreelBack2025, alt: 'Front cover of 2025 CREO Showreel'} }
     video={showreelVideo2025}
-    desc="Showreel 2025"
+    desc="Showreel 2025" key="1"
   />,
 
   //showreel_2025(),
