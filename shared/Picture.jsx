@@ -42,9 +42,9 @@ export default function Picture ({src, alt}){
 
 
   return <>
-    <Image src={src} alt={alt}  onClick={toggleZoom} className={css.pic} loading="lazy" width={100} height={100} />
+    <Image src={src} alt={alt}  onClick={toggleZoom} className={css.pic} loading="lazy" placeholder="blur" width={100} height={100} />
       <dialog ref={ref} onClose={(e)=>{toggleOff() ; e.stopPropagation()}} className={css.modal} > 
-        <Image src={src} alt={alt} onClick={toggleOff} className={css.bigscreen} loading="lazy" width={1920} height={1080} />
+        <Image src={src} alt={alt} onClick={toggleOff} className={css.bigscreen} loading="lazy" placeholder="blur" width={1920} height={1080} />
       </dialog>
   </>
 

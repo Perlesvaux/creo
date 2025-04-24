@@ -1,4 +1,8 @@
+import { Customers } from 'shared';
 import Image from 'next/image'
+//import img from '../../public/location.webp'
+import Here from './Here.jsx'
+import Cafe from './Cafe.jsx'
 import css from './page.module.css'
 export default function About() {
   return <section className={css.container}>
@@ -11,16 +15,28 @@ export default function About() {
       <h2>Nuestra especialidad</h2>
       <p><i>Branding, Diseño Multimedia, Diseño Web y Redes Sociales</i></p>
 
+
+      <h2>Contratanos</h2>
+        <a href="mailto:creoagenciadigital@gmail.com" target="_blank" tabIndex="1">
+          <Cafe className={css.cafe} />
+        </a>
+
       <h2>Encuentranos</h2>
+        <a href="https://www.bing.com/maps?where=San%20Salvador%2C%20San%20Salvador%201101%2C%20SV" target="_blank" rel="noopener noreferrer" tabIndex="2">
+          <Here className={css.here} />
+        </a>
 
+      <Customers />
+    </div>
 
-
-  </div>
-      <div className={css.map}>
-          <a href="https://www.bing.com/maps?where=San%20Salvador%2C%20San%20Salvador%201101%2C%20SV" target="_blank" rel="noopener noreferrer" tabIndex="-1">
-                      <img src="https://dev.virtualearth.net/REST/v1/Imagery/Map/CanvasLight/San%20Salvador,%20San%20Salvador,%201101,%20SV?key=Atn679uHwJz5qBW7Qdydz8-WNiejypvCQM1WRC94l9MtNSsBeNwHcLXzUAfFPaBr&amp" alt="Map of  San Salvador, San Salvador 1101, SV" className="org-location-map__image" />
-          </a>
-      </div>
-
+    <hr/>
   </section>
 }
+
+
+        //<Image 
+        //  src={img.src}
+        //  width={200}
+        //  height={200}
+        //  alt="Map of  San Salvador, San Salvador 1101, SV" 
+        //  className={css.img} />

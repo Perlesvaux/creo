@@ -40,11 +40,15 @@
   text-align: justify;
 }
 
-.about > hr {
-  width: 80vw;
+.container > hr {
+  width: 100%;
+  background-color:dimgray;
+  opacity: 0.4;
+
 }
 
 .map {
+  position:relative;
   display: flex;
   justify-content: center;
   width:100%;
@@ -69,6 +73,51 @@
     rgba(0, 0, 0, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+}
+
+.here {
+  fill:red;
+  animation: pulse 2.5s infinite ease-out ;
+}
+
+
+.cafe {
+  fill:#6f4e37;
+  animation: cafe 2.5s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+.about > a > svg {
+  width:5vw;
+  height:auto;
+  padding:1vh 0 2vh 0;
+
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+
+  45% {
+    transform: scale(1.1)
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+
+@keyframes cafe {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px) rotate(2deg); }
+  40% { transform: translateX(5px) rotate(-4deg); }
+  60% { transform: translateX(-3px) rotate(4deg); }
+  80% { transform: translateX(3px) scale(1.05) ; }
 }
 
 

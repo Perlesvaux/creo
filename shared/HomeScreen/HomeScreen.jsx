@@ -1,6 +1,6 @@
 import styles from './HomeScreen.module.css';
 //import { Carousel, Portfolios, Showreels } from 'shared'
-import { Carousel } from 'shared'
+import { Carousel, Customers } from 'shared'
 import Coffee from './Coffee.jsx'
 import FireButton from './FireButton.jsx'
 import Brewer from './Brewer.jsx'
@@ -35,7 +35,7 @@ export default function HomeScreen( { portfolios, showreels } ) {
             <Quotes />
           </div>
 
-          <FireButton className={styles.heroButton}>Let's brew something <Brewer/></FireButton>
+          <FireButton to="creoagenciadigital@gmail.com" className={styles.heroButton}>Let's brew something <Brewer/></FireButton>
 
           <div className={styles.deeds}>
             <div className={styles.portfolios}><Carousel collection={portfolios} upTo={1} vertical={true} /> </div>
@@ -43,6 +43,7 @@ export default function HomeScreen( { portfolios, showreels } ) {
           </div>
 
           <h2 className={styles.heroSubtitle}>Conocenos!</h2>
+          <Customers />
 
 
         </div>

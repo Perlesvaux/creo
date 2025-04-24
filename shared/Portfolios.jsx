@@ -84,8 +84,8 @@ import p22deportivo           from '../public/portfolio_2022_deportivo/portfolio
 
 
 const _2025 = {
-  alt:'Portfolio 2025',
-  desc:'Portfolio 2025',
+  alt:'Portafolio 2025',
+  desc:'Portafolio 2025',
   tags:'2025 Portafolio taber tu futura casa impac records b & c luxury auto',
   thumb: portfolio2025_front,
   content: [
@@ -143,8 +143,8 @@ const _2025 = {
 }
 
 const _2024 = {
-  alt:'Portfolio 2024',
-  desc:'Portfolio 2024',
+  alt:'Portafolio 2024',
+  desc:'Portafolio 2024',
   tags:'2024 Portafolio elevate igt impac records taber tu futura casa',
   thumb:portfolio2024_front,
   content: [
@@ -185,7 +185,7 @@ const _2022_comercial = {
   alt: 'Portafolio Comercial 2022',
   desc: 'Portafolio Comercial 2022',
   tags: '2022 Portafolio Comercial insurance group of texas onda fria uno chaineado la valenciana here and now english taber', 
-  thumb: portfolio2022_front,
+  thumb: { ...portfolio2022_front },
   content : [ {src: p22comercial, alt: 'Portfolio 2022 - Comercial' } ],
 }
 
@@ -193,7 +193,7 @@ const _2022_deportivo = {
   alt: 'Portafolio Deportivo 2022',
   desc: 'Portafolio Deportivo 2022',
   tags: '2022 Portafolio Deportivo river plate sv dribling',
-  thumb:portfolio2022_front,
+  thumb:{ ...portfolio2022_front },
   content : [ {src: p22deportivo, alt: 'Portfolio 2022 - Sports' } ],
 }
 
