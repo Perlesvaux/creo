@@ -26,10 +26,10 @@ export default function About() {
           <Here className={css.here} />
         </a>
 
+      <h2>Nuestros clientes!</h2>
       <Customers />
     </div>
 
-    <hr/>
   </section>
 }
 

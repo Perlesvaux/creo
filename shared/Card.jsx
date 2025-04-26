@@ -9,8 +9,10 @@ export default function Card({thumb, items, desc, alt}) {
   const open  = () => setIsOpen(true)
   const close = () => setIsOpen(false)
 
+  const [W, H] = [process.env.NEXT_PUBLIC_CARD_W, process.env.NEXT_PUBLIC_CARD_H].map(dimension => Number(dimension))
+
   return  <>
-    <Image src={thumb} onClick={open} width={50} height={50} placeholder="blur" loading="lazy" alt={alt} />
+    <Image src={thumb} onClick={open} width={W} height={H} placeholder="blur" loading="lazy" alt={alt} />
     { desc && <span className={css.desc}>{desc}</span> }
     <Modal active={isOpen} setter={close} items={items} />
   </> 

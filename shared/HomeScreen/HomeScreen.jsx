@@ -42,13 +42,13 @@ export default function HomeScreen( { portfolios, showreels } ) {
             <div className={styles.logofolios}><Carousel collection={showreels} upTo={1}  vertical={true} /></div>
           </div>
 
-          <h2 className={styles.heroSubtitle}>Conocenos!</h2>
-          <Customers />
+          <h2 className={styles.heroSubtitle}>Se parte de nuestros clientes!</h2>
 
 
         </div>
 
       </section>
+          <Customers />
     </div>
   );
 }
