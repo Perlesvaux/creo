@@ -18,6 +18,8 @@
   border-radius: 50%;
   opacity: 0.9;
   transition:  0.3s ease;
+  width:120px;
+  height:120px;
 }
 
 .img:hover {
