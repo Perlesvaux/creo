@@ -6,7 +6,7 @@ const _2022_comercial = {
   alt: 'Portafolio Comercial 2022',
   desc: 'Portafolio Comercial 2022',
   tags: '2022 Portafolio Comercial insurance group of texas onda fria uno chaineado la valenciana here and now english taber', 
-  thumb: portfolio2022_front,
+  thumb: { ...portfolio2022_front },
   content : [ {src: p22comercial, alt: 'Portfolio 2022 - Comercial' } ],
 }
 

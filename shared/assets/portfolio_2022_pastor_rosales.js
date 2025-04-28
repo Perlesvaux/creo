@@ -90,7 +90,7 @@ const _2022_pastor_rosales = {
   alt:"Portafolio Pastor Rosales 2022",
   desc:"Portafolio Pastor Rosales 2022",
   tags:"Jonathan Rosales Pastor 2022 portafolio portfolio",
-  thumb: portfolio2022_front,
+  thumb: { ...portfolio2022_front },
   content : [ 
     {src: p22rosales01, alt: 'Jonathan Rosales - Pastor' }, 
     {src: p22rosales02, alt: 'Jonathan Rosales - Pastor' }, 

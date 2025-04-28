@@ -6,7 +6,7 @@ const _2022_deportivo = {
   alt: 'Portafolio Deportivo 2022',
   desc: 'Portafolio Deportivo 2022',
   tags: '2022 Portafolio Deportivo river plate sv dribling',
-  thumb:portfolio2022_front,
+  thumb: { ...portfolio2022_front },
   content : [ {src: p22deportivo, alt: 'Portfolio 2022 - Sports' } ],
 }
 
