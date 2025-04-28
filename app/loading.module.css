@@ -1,0 +1,36 @@
+.loading {
+  /*background: #FFFFFF;*/
+  /*background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(45, 45, 45, 1) 100%);*/
+  animation: pulse 0.5s infinite ease-in-out;
+
+  background: #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height:80vh;
+
+
+}
+
+.icon {
+  animation: rotate 0.7s infinite linear;
+}
+
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

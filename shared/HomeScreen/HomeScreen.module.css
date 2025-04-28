@@ -33,7 +33,7 @@
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
   color: white;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   text-align: center;
 }
 
