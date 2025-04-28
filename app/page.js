@@ -23,11 +23,23 @@ const portfolios = async () => {
 }
 
 
+const logofolios = async () => {
+  try {
+    const logofolios = await import(`shared/Logofolios`);
+    return logofolios.default; 
+  } catch(err) {
+    console.log(err)
+    return null
+  }
+}
+
+
 //, Portfolios, Showreels 
 
 export default async function Home() {
   const port = await portfolios()
   const show = await showreels()
+  const logo = await logofolios()
 
-  return (<HomeScreen  portfolios={port} showreels={show} />);
+  return (<HomeScreen  portfolios={port} showreels={show} logofolios={logo} />);
 }

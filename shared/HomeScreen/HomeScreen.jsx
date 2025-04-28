@@ -10,7 +10,7 @@ import Quotes from './Quotes.jsx'
 
 
 
-export default function HomeScreen( { portfolios, showreels } ) {
+export default function HomeScreen( { portfolios, showreels, logofolios } ) {
 
   if (!portfolios) return <div> loading ...</div>
   if (!showreels) return <div> loading ...</div>
@@ -39,7 +39,7 @@ export default function HomeScreen( { portfolios, showreels } ) {
 
           <div className={styles.deeds}>
             <div className={styles.portfolios}><Carousel collection={portfolios} upTo={1} vertical={true} /> </div>
-            <div className={styles.logofolios}><Carousel collection={showreels} upTo={1}  vertical={true} /></div>
+            <div className={styles.logofolios}><Carousel collection={logofolios} upTo={1}  vertical={true} /></div>
           </div>
 
           <h2 className={styles.heroSubtitle}>Se parte de nuestros clientes!</h2>
