@@ -40,6 +40,7 @@ const posterCREO           =  '/poster.webp'
 
 const _2025 = {
   alt: 'Showreel 2025',
+  tags:'showreel 2025 b&c luxury auto club de los errores radio astral tu futura casa WOS',
   front: {src:showreelFront2025, alt: 'Front cover of 2025 CREO Showreel'} ,
   back: {src:showreelBack2025, alt: 'Front cover of 2025 CREO Showreel'} ,
   video:showreelVideo2025,
@@ -47,6 +48,7 @@ const _2025 = {
 
 const _2024 = {
   alt:'Showreel 2024',
+  tags:'showreel 2024 elevate academy soundUS tabernaculo biblico bautista',
   front: { src:showreelFront2024, alt:'Showreel 2024 Front'},
   back: { src:showreelBack2024, alt:'Showreel 2024 Back'},
   video:showreelVideo2024 
@@ -54,6 +56,7 @@ const _2024 = {
 
 const _2023 = {
   alt:'Showreel 2023',
+  tags:'showreel 2023 call center institute elevate academy igt insurance group of texas fish chips rene valdivieso taber ricardo quinteros',
   front: { src:showreelFront2023, alt:'Showreel 2023 Front' },
   back:  { src:showreelBack2023, alt:'Showreel 2023 Back' },
   video:showreelVideo2023
@@ -62,12 +65,14 @@ const _2023 = {
 const _2022 = {
   alt: 'Showreel 2022',
   desc: 'Showreel 2022',
+  tags:'showreel 2022 chaineado igt insurance group of texas gasolinera uno riversv wanna eat',
   front: {src:showreelFront2022,alt:'Showreel 2022 Front'},
   video: showreelVideo2022
 }
 
 const _2021 = {
   alt: 'Showreel 2021',
+  tags:'showreel 2021 uno gasolinera tu futura casa here and now english pablo olivares jev fest prueba de sonido',
   front: {src: showreelFront2021, alt:'Showreel 2021 Front' },
   back: {src: showreelBack2021, alt:'Showreel 2021 Back' },
   video: showreelVideo2021
@@ -75,6 +80,7 @@ const _2021 = {
 
 const _2020 = {
   alt: 'Showreel 2020',
+  tags:'showreel 2020 insurance group of texas igt jev rescue pc flor blanca west academy dali studio salon impac records ecoluz',
   front:{src:showreelFront2020, alt:'Showreel 2020 Front'},
   back:{ src:showreelBack2020 ,  alt:'Showreel 2020 Back' },
   video:showreelVideo2020
@@ -82,6 +88,7 @@ const _2020 = {
 
 const _2016 = {
   alt: 'Showreel 2016',
+  tags:'showreel 2016 alfredo rodriguez newsboys god is not dead tour riversv gospel tv tabernaculo biblico bautista juventud elim austin espacio comun audiofilia seguros azul 2am solutions paralelo producciones bakery boutique',
   front: { src:showreelFront2016, alt:'Showreel 2016 Front'} ,
   back: { src:showreelBack2016,  alt:'Showreel 2016 Back' } ,
   video:showreelVideo2016,
@@ -97,17 +104,18 @@ export default  [
   _2020,
   _2016
 
-].map(({alt, desc, front, back, video}, index)=> <Showreel 
+].map(({alt, desc, front, back, video, tags}, index)=> <Showreel 
   alt={alt}
   desc={desc}
   front={front}
   back={back}
   video={video}
   key={index}
+  tags={tags}
 />)
 
 
-function Showreel ({front, back, video, desc, alt}){
+function Showreel ({front, back, video, desc, alt, tags}){
 
   const items =  [
     front && <Picture key="1" src={front.src} alt={front.alt} />,
@@ -115,5 +123,5 @@ function Showreel ({front, back, video, desc, alt}){
     back && <Picture key="3" src={back.src} alt={back.alt}/>,
   ];
 
-  return <Card thumb={front.src} alt={alt} items={items} desc={desc} />
+  return <Card thumb={front.src} alt={alt} items={items} desc={desc} tags={tags} />
 }

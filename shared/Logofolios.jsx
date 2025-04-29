@@ -47,7 +47,7 @@ const _2021 = {
   alt: 'Logos 2021',
   desc: 'Logos 2021',
   tags: 'logos 2021 insurance group texas igt onda fria viña dorada hashtag viral restaurante tpt fernando dj here and now english to you delivery river sv la mega radio blue discoteca libre impac records ', 
-  thumb: logofolio_2021_front,
+  thumb: { ...logofolio_2021_front },
   content : [ 
     { src: logofolio_2021, alt: 'Portfolio - Logos 2021' }, 
   ],

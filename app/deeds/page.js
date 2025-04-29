@@ -1,6 +1,6 @@
 //import Image from "next/image";
 //import styles from "./page.module.css";
-import {DeedsScreen} from 'shared'
+import {DeedsScreen, AllContent, Portfolios} from 'shared'
 
 const deeds = async () => {
   try {
@@ -17,7 +17,7 @@ export default async function Deeds() {
 
 
   return (
-    <DeedsScreen portfolios={portfolios} />
+    <DeedsScreen portfolios={AllContent} />
   );
 }
 

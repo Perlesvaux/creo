@@ -64,10 +64,11 @@
 .records > div > img {
 
   transform: scale(0.9);
-  background-color: #f1f1f1;
+  background-color: rgb(0, 0, 0);
+  aspect-ratio: 16/9;
   width: 20vw;
   height: auto;
-  border-radius: 20px;
+  border-radius: 10px;
   /*transform: rotate(-2deg) ;*/
   /*margin-left: -300px;*/
   transition: 0.4s ease-out;
