@@ -5,10 +5,6 @@ import Coffee from './Coffee.jsx'
 import FireButton from './FireButton.jsx'
 import Brewer from './Brewer.jsx'
 import Quotes from './Quotes.jsx'
-//import showreels from './Showreels.jsx'
-//import portfolios from './Portfolios.jsx'
-
-
 
 export default function HomeScreen( { portfolios, showreels, logofolios } ) {
 
@@ -27,7 +23,7 @@ export default function HomeScreen( { portfolios, showreels, logofolios } ) {
           
           <p className={styles.heroSubtitle}>
           Danos tu idea, nosotros nos encargamos del resto.
-          Mientras tanto ¿qué tal un cafesito? <Coffee fill="goldenrod" />
+          Mientras tanto ¿qué tal un cafecito? <Coffee fill="goldenrod" />
           </p>
 
           <div className={styles.presentation}>

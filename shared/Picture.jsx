@@ -24,7 +24,6 @@ export default function Picture ({src, alt}){
     }
 
     const clickHandler = (e)=>{
-      console.log(e.target, ref.current)
       if (e.target === ref.current) {
         toggleOff()
       }
@@ -33,7 +32,6 @@ export default function Picture ({src, alt}){
     addEventListener('click', clickHandler)
 
     return () => {
-      console.log('modal 2 closed')
       removeEventListener('click', clickHandler)
 
     }
@@ -49,6 +47,4 @@ export default function Picture ({src, alt}){
   </>
 
 }
-//<h1 popover="True" id="myheader">Hello</h1>
-//
-//<button popovertarget="myheader">Click me!</button>
+

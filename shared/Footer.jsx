@@ -1,8 +1,6 @@
 import css from './Footer.module.css'
 export default function Footer(){
 
-  
-
   return <> 
     <hr className={css.division} />
     <footer className={css.container}>
@@ -13,21 +11,3 @@ export default function Footer(){
   </footer></> 
 
 }
-
-
-
-
-  //return <footer className={css.siteFooter}>
-  //    <div className={css.footerColWrapper}>
-  //      <h2 className={css.footerHeading}>CREO</h2>
-  //      <div className={css.footerCol}>
-  //        <p>© 2025 CREO Agencia Digital. All rights reserved.</p>
-  //      </div>
-  //      <div className={css.footerCol}>
-  //        <ul className={css.socialMediaList}>
-  //          <li><a href="https://github.com/yourusername">GitHub</a></li>
-  //          <li><a href="https://twitter.com/yourusername">Twitter</a></li>
-  //        </ul>
-  //      </div>
-  //    </div>
-  //  </footer>

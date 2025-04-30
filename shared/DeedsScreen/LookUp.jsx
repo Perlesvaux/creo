@@ -29,7 +29,6 @@ export default function LookUp ({value, setter}){
     addEventListener('keydown', keyHandler)
 
     return () => {
-      console.log('search closed')
       removeEventListener('click', clickHandler)
       removeEventListener('keydown', keyHandler)
     }

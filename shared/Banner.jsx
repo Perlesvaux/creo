@@ -25,5 +25,3 @@ export default function Banner() {
   </div>)
 }
 
-//{ socials.map((elem, index)=><Social key={index} {...elem} />) }
-//{ socials.map(({icon, to}, index)=><Social key={index} icon={icon} to={to} />) }

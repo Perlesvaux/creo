@@ -2,8 +2,8 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import css from './Card.module.css'
-//import Modal from './Modal.jsx'
 import { Modal } from 'shared'
+
 export default function Card({thumb, items, desc, alt}) {
   const [isOpen, setIsOpen] = useState(false)
   const open  = () => setIsOpen(true)

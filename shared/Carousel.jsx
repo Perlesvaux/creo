@@ -32,8 +32,6 @@ export default function Carousel({ collection, upTo = 3, vertical=false }) {
 
     const handleTransitionDirectionDebounce =()=>{
       if (timerID) clearInterval(timerID)
-      
-      console.log('inside')
 
       setTimeout(()=>{
         setTransitionDirection('curr')

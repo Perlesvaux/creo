@@ -1,23 +1,7 @@
-//import Image from "next/image";
-//import styles from "./page.module.css";
-import {DeedsScreen, AllContent, Portfolios} from 'shared'
+import {DeedsScreen, AllContent} from 'shared'
 
-const deeds = async () => {
-  try {
-    const portfolios = await import(`shared/Portfolios`);
-    return portfolios.default; // The default export is the image URL
-  } catch (error) {
-    console.error('Failed to load image:', error);
-    return null;
-  }
-};
-
-export default async function Deeds() {
-  const portfolios = await deeds()
-
-
+export default function Deeds() {
   return (
     <DeedsScreen portfolios={AllContent} />
   );
 }
-

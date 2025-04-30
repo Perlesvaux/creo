@@ -1,6 +1,5 @@
 import { Customers } from 'shared';
 import Image from 'next/image'
-//import img from '../../public/location.webp'
 import Here from './Here.jsx'
 import Cafe from './Cafe.jsx'
 import css from './page.module.css'
@@ -16,7 +15,7 @@ export default function About() {
       <p><i>Branding, Diseño Multimedia, Diseño Web y Redes Sociales</i></p>
 
 
-      <h2>Contratanos</h2>
+      <h2>Contáctanos</h2>
         <a href="mailto:creoagenciadigital@gmail.com" target="_blank" tabIndex="1">
           <Cafe className={css.cafe} />
         </a>
@@ -32,11 +31,3 @@ export default function About() {
 
   </section>
 }
-
-
-        //<Image 
-        //  src={img.src}
-        //  width={200}
-        //  height={200}
-        //  alt="Map of  San Salvador, San Salvador 1101, SV" 
-        //  className={css.img} />

@@ -1,10 +1,8 @@
 "use client"
 import {useEffect, useRef, useState} from 'react'
 import css from './Modal.module.css'
-//import SimpleScreen from './SimpleScreen.jsx'
 import { SimpleScreen, CreoLogo, Exit } from 'shared'
-//import CreoLogo from './CreoLogo.jsx'
-//import { Exit } from './Icons.jsx'
+
 export default function Modal({active, setter, items}){
   const [visibleItems, setVisibleItems] = useState(items.slice(0,5))
   const [page, setPage] = useState(1)
@@ -22,7 +20,6 @@ export default function Modal({active, setter, items}){
     }
 
     const clickHandler = (e)=>{
-      console.log(e.target, ref.current)
       if (e.target === ref.current) {
         setter()
       }
@@ -31,14 +28,11 @@ export default function Modal({active, setter, items}){
     addEventListener('click', clickHandler)
 
     return () => {
-      console.log('modal closed')
       removeEventListener('click', clickHandler)
 
     }
   }, [active, setter])
 
-
-    //{visibleItems.map((e)=>e)}  
 
   useEffect(() => {
     setVisibleItems(items.slice(0,5))
@@ -50,12 +44,8 @@ export default function Modal({active, setter, items}){
     const loadMoreContent = () => {
       if (container) {
         const { scrollTop, scrollHeight, clientHeight } = container;
-        console.log('Scroll position:', scrollTop);
 
-        // Example: Trigger a function when scrolled to the bottom
         if (scrollTop + clientHeight >= scrollHeight - 300) {
-          console.log('Reached the bottom!');
-          //loadMore();
           if (fireButton) {
             fireButton.click()
           }
@@ -80,7 +70,6 @@ export default function Modal({active, setter, items}){
 
     if (container) container.addEventListener('scroll', handleScroll, { passive: true });
     
-    //Cleanup the event listener
     return () => {
       if (container) container.removeEventListener('scroll', handleScroll);
     };

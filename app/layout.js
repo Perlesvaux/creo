@@ -4,7 +4,6 @@ import Link from "next/link"
 import { Bebas_Neue, Play } from "next/font/google";
 import css from "./globals.module.css";
 import { Banner, NavBar, Footer } from 'shared'
-//import {Card, Picture, Carousel, Showreels} from 'shared'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -48,6 +47,3 @@ export default function RootLayout({ children }) {
   );
 }
 
-      //<body className={`${geistSans.variable} ${geistMono.variable}`}>
-      //  {children}
-      //</body>
