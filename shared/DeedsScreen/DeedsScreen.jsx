@@ -26,7 +26,7 @@ export default function DeedsScreen({ portfolios }) {
       
       <div className={css.records}>
         {filteredPortfolios.map((item) => (
-          <div key={item.props.tags.toLowerCase()}>{item}</div>
+          <div key={item.props?.tags.toLowerCase()}>{item}</div>
         ))}
       </div>
     </div>
